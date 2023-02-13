@@ -7,15 +7,17 @@
 
 .nav_wrapper ul {
   width: 315px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: center;
 }
-.nav_wrapper ul p {
+.nav_wrapper ul .header_nav_link {
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 300;
+  color: #000;
 }
 .nav_wrapper .header_nav_separator {
   width: 3px;
@@ -54,7 +56,10 @@
   height: 200px;
   margin-top: 50px;
 }
-.wrapper_content_menu_button button {
+.wrapper_content_menu_button .content_menu_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 15px;
   border: none;
   width: 100%;
@@ -64,11 +69,13 @@
   background-size: cover;
   background-position: 0px;
 }
-.wrapper_content_menu_button button p {
+.wrapper_content_menu_button .content_menu_button p {
   font-family: "Raleway";
   font-size: 48px;
   font-weight: 300;
   color: #FFF;
+  margin: auto 0;
+  text-align: center;
 }
 
 .footer_wrapper {
@@ -122,6 +129,10 @@
   font-family: "Raleway";
   font-size: 12px;
   font-weight: 500;
+  color: #000;
+}
+
+.test {
   color: #000;
 }
 

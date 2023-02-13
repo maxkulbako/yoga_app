@@ -17,3 +17,4 @@ export function LeftSide ({ ContentMenuList = MenuList }) {
     </div>
   );
 }
+

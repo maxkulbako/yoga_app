@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Header () {
   return (
     <div className="header_wrapper">
@@ -9,19 +11,19 @@ export function Header () {
       <nav className="nav_wrapper">
         <ul>
           <li>
-            <p>о нане</p>
+            <Link className="header_nav_link" to={`about/`}>о нане</Link>
           </li>
           <div className="header_nav_separator"></div>
           <li>
-            <p>йога</p>
+            <Link className="header_nav_link" to={`yoga/`}>йога</Link>
           </li>
           <div className="header_nav_separator"></div>
           <li>
-            <p>ретрит</p>
+            <Link className="header_nav_link" to={`retreat/`}>ретрит</Link>
             </li>
           <div className="header_nav_separator"></div>
           <li>
-            <p>контакты</p>
+            <Link className="header_nav_link" to={`contacts/`}>контакты</Link>
           </li>
         </ul>
       </nav>

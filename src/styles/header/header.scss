@@ -8,15 +8,17 @@
 .nav_wrapper {
   ul {
     width: 315px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: center;
 
-    p {
+    .header_nav_link {
       font-family: 'Raleway';
       font-size: 14px;
       font-weight: 300;
+      color: #000;
     }
   }
 

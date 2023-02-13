@@ -1,12 +1,12 @@
 import './styles/app.css';
-import { Content } from './views';
 import { Header, Footer } from './views/components';
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
     <div className="App">
         <Header/>
-        <Content/>
+        <Outlet/>
         <Footer/>
     </div>
   );

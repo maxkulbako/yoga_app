@@ -19,7 +19,10 @@
   height: 200px;
   margin-top: 50px;
 }
-.wrapper_content_menu_button button {
+.wrapper_content_menu_button .content_menu_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 15px;
   border: none;
   width: 100%;
@@ -29,9 +32,11 @@
   background-size: cover;
   background-position: 0px;
 }
-.wrapper_content_menu_button button p {
+.wrapper_content_menu_button .content_menu_button p {
   font-family: "Raleway";
   font-size: 48px;
   font-weight: 300;
   color: #FFF;
+  margin: auto 0;
+  text-align: center;
 }/*# sourceMappingURL=content.css.map */
