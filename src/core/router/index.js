@@ -5,6 +5,8 @@ import { About } from "../../views/About.js";
 import { Retreat } from "../../views/Retreat.js";
 import { Content } from "../../views";
 import ErrorPage from "./ErrorPage";
+import { Course } from "../../views/components/Course";
+import { Online } from "../../views/components/Online";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +16,17 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "yoga/",
-        element: <Content/>
+        element: <Content/>,
+        children: [
+          {
+            path: "course/",
+            element: <Course />,
+          },
+          {
+            path: "online/",
+            element: <Online />,
+          },
+        ],
       },
       {
         path: "contacts/",
