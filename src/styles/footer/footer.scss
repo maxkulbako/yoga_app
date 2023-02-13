@@ -1,0 +1,57 @@
+.footer_wrapper {
+  padding-top: 30px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-areas: "web web web" "copyright social_media policy";
+  row-gap: 20px;
+  align-items: center;
+}
+
+.footer_web {
+  grid-area: web;
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer_copyright {
+  grid-area: copyright;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.social_media_wrapper {
+  grid-area: social_media;
+  justify-self: center;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  a {
+    width: 24px;
+    height: 24px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer_terms_privacy {
+  grid-area: policy;
+  justify-self: end;
+
+  ul {
+    display: flex;
+    gap: 20px;
+
+    a {
+      font-family: "Raleway";
+      font-size: 12px;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+}
