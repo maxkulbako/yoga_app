@@ -1,18 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Media from "react-media";
 import App from "../../App";
-import { Contacts } from "../../views/Contacts/Contacts";
-import { About } from "../../views/About/About";
-import { Retreat } from "../../views/Retreat/Retreat";
-import { ContentYoga } from "../../views/Yoga";
+import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
-import { Courses } from "../../views/Yoga/Courses/index";
-import { Online } from "../../views/Yoga/Menu/";
-import { NewsPage } from "../../views/Yoga/conmonents/NewsPage";
-import { DeepPage } from "../../views/Yoga/Courses/DeepPage";
-import { Morning } from "../../views/Yoga/Courses/Morning";
-import { CoursesList } from "../../views/Yoga/Courses/CoursesList";
-import { NavMenu } from "../../views/Yoga/conmonents/RightSide";
+import { NewsPage, Online } from "../../views/Yoga/MenuPages";
+import { Courses, CoursesList, DeepPage, Morning } from "../../views/Yoga/Courses";
+import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu"
 
 export const router = createBrowserRouter([
   {
@@ -77,7 +70,7 @@ function StartElement () {
       }}>
         {matches => (
           <div>
-            {matches.small && <NavMenu/>}
+            {matches.small && <YogaNavMenu/>}
             {matches.large && <NewsPage/>}
           </div>
         )}
