@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Media from "react-media";
 import App from "../../App";
 import { Contacts } from "../../views/Contacts/Contacts";
 import { About } from "../../views/About/About";
@@ -11,6 +12,7 @@ import { NewsPage } from "../../views/Yoga/conmonents/NewsPage";
 import { DeepPage } from "../../views/Yoga/Courses/DeepPage";
 import { Morning } from "../../views/Yoga/Courses/Morning";
 import { CoursesList } from "../../views/Yoga/Courses/CoursesList";
+import { NavMenu } from "../../views/Yoga/conmonents/RightSide";
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +26,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: "",
-            element: <NewsPage/>
+            element: <StartElement/>
           },
           {
             path: "course/",
@@ -65,3 +67,21 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+
+function StartElement () {
+  return (
+    <>
+      <Media queries={{
+        small: "(max-width: 599px)",
+        large: "(min-width: 1200px)"
+      }}>
+        {matches => (
+          <div>
+            {matches.small && <NavMenu/>}
+            {matches.large && <NewsPage/>}
+          </div>
+        )}
+      </Media>
+    </>
+  );
+}

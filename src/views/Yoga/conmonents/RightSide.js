@@ -8,13 +8,22 @@ const MenuList = [
   {title: "индивидуальные занятия", link: "indv", background: "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676280762/nana_yoga/menu_img/%D0%B8%D0%BD%D0%B4%D0%B2_uqqa8k.jpg"}
 ]
 
-export function RightSide ({ ContentMenuList = MenuList }) {
+export function RightSide () {
+  return (
+    <div className="right_side_wrapper">
+      <NavMenu/>
+    </div>
+  );
+}
+
+
+export function NavMenu ({ ContentMenuList = MenuList }) {
   return (
     <div>
-    { ContentMenuList.map(({title, background, link}, index) => (
-      <Button link={link} key={index} title={title} background={background}></Button>
-    ))
-    }
+      { ContentMenuList.map(({title, background, link}, index) => (
+        <Button link={link} key={index} title={title} background={background}></Button>
+      ))
+      }
     </div>
   );
 }

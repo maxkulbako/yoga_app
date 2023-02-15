@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 export function LeftSide () {
 
   return (
-    <div className="leftside_wrapper">
+    <div className="left_side_wrapper">
       <Outlet/>
     </div>
   );

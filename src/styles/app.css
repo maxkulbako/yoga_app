@@ -42,8 +42,14 @@
   justify-content: space-between;
 }
 
-.leftside_wrapper {
+.left_side_wrapper {
   width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .right_side_wrapper {
+    display: none;
+  }
 }
 
 .content_separator {
@@ -53,6 +59,11 @@
   border: 1px solid #D9D9D9;
   border-radius: 3px;
   margin: 35px 0;
+}
+@media screen and (max-width: 600px) {
+  .content_separator {
+    display: none;
+  }
 }
 
 .wrapper_content_menu_button {
@@ -143,4 +154,6 @@
 .App {
   margin: 0 auto;
   max-width: 1288px;
-}/*# sourceMappingURL=app.css.map */
+}
+
+/*# sourceMappingURL=app.css.map */

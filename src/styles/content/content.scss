@@ -5,8 +5,14 @@
   justify-content: space-between;
 }
 
-.leftside_wrapper {
+.left_side_wrapper {
   width: 500px;
+}
+
+.right_side_wrapper {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .content_separator {
@@ -16,6 +22,10 @@
   border: 1px solid #D9D9D9;
   border-radius: 3px;
   margin: 35px 0;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .wrapper_content_menu_button {
@@ -35,7 +45,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
-    
+
     p {
       font-family: 'Raleway';
       font-size: 48px;
