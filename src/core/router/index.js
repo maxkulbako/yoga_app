@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Media from "react-media";
 import App from "../../App";
 import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
 import { NewsPage, Online } from "../../views/Yoga/MenuPages";
 import { Courses, CoursesList, DeepPage, Morning } from "../../views/Yoga/Courses";
-import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu"
+import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
+import { useMediaQuery } from "../hooks";
 
 export const router = createBrowserRouter([
   {
@@ -62,19 +62,11 @@ export const router = createBrowserRouter([
 ]);
 
 function StartElement () {
+  const isDesktop = useMediaQuery('(min-width: 600px)');
+
   return (
     <>
-      <Media queries={{
-        small: "(max-width: 599px)",
-        large: "(min-width: 600px)"
-      }}>
-        {matches => (
-          <div>
-            {matches.small && <YogaNavMenu/>}
-            {matches.large && <NewsPage/>}
-          </div>
-        )}
-      </Media>
+      {isDesktop ? <NewsPage/> : <YogaNavMenu/>}
     </>
   );
 }
