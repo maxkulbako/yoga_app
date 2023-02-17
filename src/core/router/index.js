@@ -66,7 +66,7 @@ function StartElement () {
     <>
       <Media queries={{
         small: "(max-width: 599px)",
-        large: "(min-width: 1200px)"
+        large: "(min-width: 600px)"
       }}>
         {matches => (
           <div>

@@ -31,3 +31,14 @@ export const coursesMenuList = [
   {title: "инь-йога", link: "in", background: "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284890/nana_yoga/course/img/%D0%B8%D0%BD%D1%8C_dkokyf.png"},
   {title: "14 дней практики каждый день", link: "14_day", background: "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284881/nana_yoga/course/img/14_%D0%B4%D0%BD%D0%B5%D0%B8%CC%86_vrwn7d.jpg"}
 ]
+
+export const navMenuList = [
+  {title: "о нане", link: "about/"},
+  {title: "йога", link: "yoga/"},
+  {title: "ретрит", link: "retreat/"},
+  {title: "контакты", link: "contacts/"}
+]
+
+export const LOGO_BLACK = "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676218039/NANA_yoga_7_eqkeld.png"
+
+export const LOGO_WHITE = "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676560524/nana_yoga/menu_img/NANA_yoga_8_qgmqag.png"
