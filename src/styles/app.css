@@ -120,6 +120,34 @@
   }
 }
 
+.buy_btn_wrapper {
+  margin: 0 auto;
+  background-color: #C7956D;
+  border-radius: 9px;
+  transition: 0.2s ease-in;
+}
+.buy_btn_wrapper:hover {
+  filter: drop-shadow(0px 0px 5px #C7956D);
+}
+.buy_btn_wrapper button {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.buy_btn_wrapper p {
+  min-width: 126px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .main_wrapper {
   max-width: 1070px;
   margin: 50px auto 30px;
@@ -273,6 +301,103 @@
 
 .test {
   color: #000;
+}
+
+.page_container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.page_title {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px;
+}
+.page_title p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #FFF;
+}
+
+.video_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  height: 270px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px;
+}
+.video_button svg {
+  color: #FFFFFF;
+  transition: ease-in 0.3s;
+}
+.video_button:hover > svg {
+  color: #639542;
+}
+
+.page_text_block p {
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.page_text_block p:last-child {
+  margin-bottom: 0;
+}
+.page_text_block .telegram_link {
+  margin-bottom: 20px;
+}
+.page_text_block .telegram_link p {
+  margin-bottom: 0;
+}
+.page_text_block .telegram_link a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #976945;
+}
+
+.try_button_block {
+  margin: 0 auto;
+}
+.try_button_block p {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  width: fit-content;
+  display: inline-block;
+}
+.try_button_block a {
+  display: inline-block;
+  font-style: italic;
+  border: none;
+  color: #AA7A54;
+  text-decoration-line: underline;
+  background: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
 }
 
 .App {
