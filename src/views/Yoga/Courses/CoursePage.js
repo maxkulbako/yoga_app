@@ -1,20 +1,25 @@
+import {useParams} from "react-router-dom";
+import { coursesMenuList } from "../../../core/constants/storage";
 import { BuyButton } from "./components";
 
-export function DeepPage () {
+export function CoursePage () {
+  const {titleID} = useParams();
+  const { title, background } = coursesMenuList.find(page => page.link === titleID)
+
   return (
     <div className="page_container">
       <div className="page_title"
           style={{
-            backgroundImage: `url("https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284882/nana_yoga/course/img/%D0%BF%D0%BE%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_qf3uce.jpg")`
+            backgroundImage: `url(${background})`
           }}
       >
-        <p>погружение</p>
+        <p>{title}</p>
       </div>
       <button
         className="video_button"
         style={{
-          backgroundImage: `url("https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284882/nana_yoga/course/img/%D0%BF%D0%BE%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_qf3uce.jpg")`
-        }}
+          backgroundImage: `url(${background})`
+      }}
       >
         <svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="10" y="19" width="89" height="71" rx="13" stroke="currentColor" strokeWidth="2"/>

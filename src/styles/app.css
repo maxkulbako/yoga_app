@@ -222,7 +222,7 @@
 .wrapper_content_menu_button .content_menu_button p {
   font-family: "Raleway", sans-serif;
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 100;
   color: #FFF;
   margin: auto 0;
   text-align: center;
@@ -326,7 +326,7 @@ p {
 }
 .page_title p {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 48px;
   line-height: 56px;
   text-align: center;
