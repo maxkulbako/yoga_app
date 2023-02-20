@@ -3,7 +3,7 @@ import App from "../../App";
 import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
 import { NewsPage, Online } from "../../views/Yoga/MenuPages";
-import { Courses, CoursesList, CoursePage, Morning } from "../../views/Yoga/Courses";
+import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
 import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
 import { useMediaQuery } from "../hooks";
 

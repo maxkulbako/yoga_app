@@ -42,6 +42,7 @@
   width: 100%;
   height: 200px;
   margin-bottom: 50px;
+  position: relative;
   &:last-child {
     margin-bottom: 0;
   }
@@ -53,6 +54,7 @@
   }
 
   .content_menu_button {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +66,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
+    transition: width .2s, height .2s, margin-left .3s ;
 
+    &:hover {
+      width: 103%;
+      height: 103%;
+      filter: drop-shadow(5px 5px 9px rgba(0, 0, 0, 0.25));
+    }
+
+    &.selected {
+      margin-left: 30px;
+      width: 103%;
+      height: 103%;
+      filter: drop-shadow(5px 5px 9px rgba(0, 0, 0, 0.25));
+    }
     p {
       font-family: 'Raleway', sans-serif;
       font-size: 48px;
@@ -76,6 +91,21 @@
       @media screen and (max-width: 1024px) {
         font-size: 30px;;
       }
+    }
+  }
+
+  .dot {
+    width: 24px;
+    height: 24px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    transition: .5s ease-in;
+
+    &.selected {
+      margin-left: -10px;
     }
   }
 }
