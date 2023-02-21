@@ -3,6 +3,10 @@
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 10px;
+  }
 }
 
 .nav_wrapper.mobile {
@@ -12,12 +16,82 @@
   }
 }
 
+.nav_wrapper.start {
+  padding-right: 120px;
+  padding-bottom: 20px;
+  @media screen and (max-width: 600px) {
+    display: block;
+    padding: 80px 0;
+  }
+
+  ul {
+
+    &.start {
+      width: 404px;
+
+      .header_nav_separator {
+        background-color: #FFFFFF;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .nav_wrapper {
   @media screen and (max-width: 600px) {
     display: none;
   }
 
   ul {
+
+    &.start {
+      width: 404px;
+
+      .header_nav_separator {
+        background-color: #FFFFFF;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+
+      .header_nav_link {
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFFFFF;
+
+        &.active {
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 1px;
+            background-color: #FFFFFF;
+            transition: 0.7s;
+          }
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: -3px;
+          width: 0;
+          height: 1px;
+          background-color: #FFFFFF;
+          transition: 0.7s;
+        }
+      }
+    }
+
     width: 315px;
     height: 100%;
     display: flex;
@@ -108,14 +182,36 @@
   width: 76px;
   height: 54px;
 
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+
+
+    &:hover >img {
+      transform: scale(1.1);
+    }
+  }
+
   img {
     width: 100%;
     padding: 10px 0;
+    transition: 0.2s ease-in;
   }
 
   &.mobile {
     margin: 0 auto;
     width: 150px;
+  }
+
+  &.start {
+    display: none;
+    @media screen and (max-width: 600px) {
+      margin: 0 auto;
+      width: 150px;
+      display: block;
+    }
   }
 }
 
@@ -126,4 +222,5 @@
     display: block;
   }
 }
+
 
