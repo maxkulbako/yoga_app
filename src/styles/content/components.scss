@@ -31,9 +31,9 @@
 
 .title_block_wrapper {
   margin-bottom: 30px;
-  padding: 0 30px;
+  padding: 0 70px;
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 800px){
     padding: 0 10px;
   }
 
@@ -44,7 +44,7 @@
     letter-spacing: 0.13em;
     line-height: 38px;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 800px){
      text-align: center;
     }
   }

@@ -2,6 +2,7 @@
 @import './content/content.scss';
 @import './footer/footer.scss';
 @import './content/page.scss';
+@import './content/scroll.scss';
 
 .App {
   margin: 0 auto;
@@ -13,7 +14,7 @@
   height: 100vh;
 
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     padding: 0 10px;
   }
 }

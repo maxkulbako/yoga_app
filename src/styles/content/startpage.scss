@@ -5,13 +5,8 @@
   bottom: 0;
   right: 0;
   left:0;
-  //display: flex;
-  //flex-flow: column nowrap;
-  //justify-content: center;
-  //align-items: center;
   z-index: 99;
   background-color: #FFF8F0;
-  // background-color: #c0c0c0;
   height: 100vh;
   transition: 0.5s ease-in;
   &.close {
@@ -31,7 +26,7 @@
   align-items: center;
   justify-content: flex-end;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: flex-start;
   }

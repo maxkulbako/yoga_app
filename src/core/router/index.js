@@ -58,7 +58,7 @@ export const router = createBrowserRouter([
 ]);
 
 function StartElement () {
-  const isDesktop = useMediaQuery('(min-width: 600px)');
+  const isDesktop = useMediaQuery('(min-width: 800px)');
 
   return (
     <>

@@ -28,9 +28,9 @@
 
 .title_block_wrapper {
   margin-bottom: 30px;
-  padding: 0 30px;
+  padding: 0 70px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .title_block_wrapper {
     padding: 0 10px;
   }
@@ -42,7 +42,7 @@
   letter-spacing: 0.13em;
   line-height: 38px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .title_block_wrapper .title_text_top {
     text-align: center;
   }
@@ -60,7 +60,7 @@
   grid-template-columns: 1fr auto 1fr;
   overflow: hidden;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .main_wrapper {
     grid-template-columns: 1fr;
     padding: 0;
@@ -72,11 +72,27 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 10px 50px;
-  overflow: scroll;
+  padding: 10px 70px;
+  overflow: auto;
+}
+@media screen and (max-width: 1000px) {
+  .side_wrapper {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .side_wrapper {
+    padding: 0 30px;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  .side_wrapper.right {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
   .side_wrapper.right {
     display: none;
   }
@@ -90,7 +106,7 @@
   border-radius: 3px;
   margin: 0 15px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .content_separator {
     display: none;
   }
@@ -98,16 +114,21 @@
 
 .wrapper_content_menu_button {
   width: 100%;
-  height: 13vw;
+  height: 22vh;
   margin-bottom: 50px;
   position: relative;
 }
 .wrapper_content_menu_button:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .wrapper_content_menu_button {
-    height: 24vw;
+    height: 14vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .wrapper_content_menu_button {
+    height: 30vw;
   }
 }
 .wrapper_content_menu_button .content_menu_button {
@@ -131,7 +152,7 @@
   filter: drop-shadow(5px 5px 9px rgba(0, 0, 0, 0.25));
 }
 .wrapper_content_menu_button .content_menu_button.selected {
-  margin-left: 30px;
+  margin-left: 20px;
   width: 103%;
   height: 103%;
   filter: drop-shadow(5px 5px 9px rgba(0, 0, 0, 0.25));
@@ -160,5 +181,10 @@
   transition: 0.5s ease-in;
 }
 .wrapper_content_menu_button .dot.selected {
-  margin-left: -10px;
+  margin-left: -50px;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper_content_menu_button .dot.selected {
+    margin-left: -30px;
+  }
 }/*# sourceMappingURL=content.css.map */
