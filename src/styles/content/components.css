@@ -1,0 +1,55 @@
+.buy_btn_wrapper {
+  margin: 0 auto;
+  background-color: #C7956D;
+  border-radius: 9px;
+  transition: 0.2s ease-in;
+}
+.buy_btn_wrapper:hover {
+  filter: drop-shadow(0px 0px 5px #C7956D);
+}
+.buy_btn_wrapper button {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.buy_btn_wrapper p {
+  min-width: 126px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title_block_wrapper {
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+@media screen and (max-width: 600px) {
+  .title_block_wrapper {
+    padding: 0 10px;
+  }
+}
+.title_block_wrapper .title_text_top {
+  font-family: Raleway, sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  letter-spacing: 0.13em;
+  line-height: 38px;
+}
+@media screen and (max-width: 600px) {
+  .title_block_wrapper .title_text_top {
+    text-align: center;
+  }
+}
+.title_block_wrapper .title_separator {
+  width: 100%;
+  height: 2px;
+  background-color: #E5E0E0;
+  border-radius: 4px;
+}/*# sourceMappingURL=components.css.map */

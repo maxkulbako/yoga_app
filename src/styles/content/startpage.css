@@ -1,3 +1,33 @@
+.start_page_wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #FFF8F0;
+  height: 100vh;
+  transition: 0.5s ease-in;
+}
+.start_page_wrapper.close {
+  top: -120%;
+}
 
-
-/*# sourceMappingURL=startpage.css.map */
+.start_page {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  z-index: 10000;
+  margin: 0 auto;
+  filter: drop-shadow(5px 5px 9px rgba(0, 0, 0, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 600px) {
+  .start_page {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}/*# sourceMappingURL=startpage.css.map */

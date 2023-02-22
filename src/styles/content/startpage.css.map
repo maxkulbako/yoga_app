@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"startpage.css"}
+{"version":3,"sources":["startpage.scss","startpage.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,eAAA;EACA,MAAA;EACA,SAAA;EACA,QAAA;EACA,OAAA;EAKA,WAAA;EACA,yBAAA;EAEA,aAAA;EACA,wBAAA;ACJF;ADKE;EACE,UAAA;ACHJ;;ADQA;EACE,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,cAAA;EACA,cAAA;EACA,oDAAA;EACA,aAAA;EACA,mBAAA;EACA,yBAAA;ACLF;ADOE;EAXF;IAYI,sBAAA;IACA,2BAAA;ECJF;AACF","file":"startpage.css"}
