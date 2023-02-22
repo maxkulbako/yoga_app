@@ -1,13 +1,22 @@
 import './styles/app.css';
-import { Header, Footer } from './views/components';
+import { Header, Footer, TitleBlock } from './views/components';
 import { Outlet } from "react-router-dom";
+import { connect } from "react-redux";
 
-export default function App() {
+
+function App({title}) {
   return (
     <div className="App">
         <Header/>
+        <TitleBlock title={title}/>
         <Outlet/>
         <Footer/>
     </div>
   );
 }
+
+const mapState = (state) => ({
+  title: state.activeMenuButton
+})
+
+export default connect(mapState)(App);
