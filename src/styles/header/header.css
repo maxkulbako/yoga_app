@@ -1,5 +1,5 @@
 .header_wrapper {
-  height: 54px;
+  height: 76px;
   margin-top: 20px;
   margin-bottom: 30px;
   display: flex;
@@ -166,8 +166,8 @@
 }
 
 .logo_wrapper {
-  width: 76px;
-  height: 54px;
+  width: 120px;
+  height: 76px;
 }
 .logo_wrapper button {
   border: none;

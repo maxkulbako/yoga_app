@@ -1,19 +1,28 @@
+.header_container {
+  height: 106px;
+  width: 100%;
+}
+
 .header_wrapper {
-  height: 54px;
-  margin-top: 20px;
+  padding-top: 20px;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   @media screen and (max-width: 800px) {
-    margin-top: 10px;
+  padding: 20px 10px 0;
+  position: fixed;
+  background-color: #FFF8F0;
+  opacity: 0.7;
+  z-index: 10;
   }
 }
 
 .nav_wrapper.mobile {
   @media screen and (max-width: 800px) {
     display: block;
-    padding: 80px 0;
+    padding: 80px 10px;
   }
 }
 
@@ -65,35 +74,37 @@
         line-height: 28px;
         color: #FFFFFF;
 
-        &.active {
+        @media screen and (min-width: 800px) {
+          &.active {
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              right: 0;
+              bottom: -3px;
+              width: 100%;
+              height: 1px;
+              background-color: #FFFFFF;
+              transition: 0.7s;
+            }
+          }
+  
           &:after {
             content: "";
             display: block;
             position: absolute;
             right: 0;
             bottom: -3px;
-            width: 100%;
+            width: 0;
             height: 1px;
             background-color: #FFFFFF;
             transition: 0.7s;
-          }
-        }
-
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          right: 0;
-          bottom: -3px;
-          width: 0;
-          height: 1px;
-          background-color: #FFFFFF;
-          transition: 0.7s;
+          } 
         }
       }
     }
 
-    width: 315px;
+    width: 360px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -102,53 +113,55 @@
 
     @media screen and (max-width: 800px) {
       width: 100%;
-      height: 100vh;
+      height: 55vh;
       flex-direction: column;
     }
 
     .header_nav_link {
       font-family: 'Raleway', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
       color: #000;
       position: relative;
 
-      &.active {
+      @media screen and (min-width: 800px){
+        &.active {
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transition: 0.7s;
+          }
+        }
+  
         &:after {
           content: "";
           display: block;
           position: absolute;
           right: 0;
           bottom: -3px;
-          width: 100%;
+          width: 0;
           height: 2px;
           background-color: #000;
           transition: 0.7s;
         }
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: -3px;
-        width: 0;
-        height: 2px;
-        background-color: #000;
-        transition: 0.7s;
-      }
-
-      &:hover:after {
-        content: "";
-        width: 100%;
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        height: 2px;
-        background-color: #E0BE9C;
-        transition: 0.7s;
+  
+        &:hover:after {
+          content: "";
+          width: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          height: 2px;
+          background-color: #E0BE9C;
+          transition: 0.7s;
+        }
       }
 
       @media screen and (max-width: 800px) {
@@ -172,7 +185,8 @@
 
     @media screen and (max-width: 800px) {
       width: 40px;
-      height: 2px;
+      height: 1px;
+      opacity: 0.5;
       background-color: #E5E0E0;
       border-radius: 4px;
     }
@@ -180,8 +194,8 @@
 }
 
 .logo_wrapper {
-  width: 76px;
-  height: 54px;
+  width: 120px;
+  height: 56px;
 
   button {
     border: none;
@@ -197,7 +211,6 @@
 
   img {
     width: 100%;
-    padding: 10px 0;
     transition: 0.2s ease-in;
   }
 
@@ -221,6 +234,9 @@
 
   @media screen and (max-width: 800px) {
     display: block;
+    height: fit-content;
+    align-self: center;
+    margin-right: 10px;
   }
 }
 

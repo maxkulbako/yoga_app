@@ -13,7 +13,7 @@ export function Header () {
   }
 
   return (
-    <div>
+    <div className="header_container">
       <StartPage onStart={handleStartPage} isStartOpen={isStartOpen} />
       <div className="header_wrapper">
         <NavBar onStart={handleStartPage} navList={navMenuList} logo={LOGO_BLACK}/>
