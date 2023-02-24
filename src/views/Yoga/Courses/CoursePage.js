@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import { coursesMenuList } from "../../../core/constants/storage";
-import { BuyButton } from "./components";
+import { BaseButton } from "../../components";
 
 export function CoursePage () {
   const {titleID} = useParams();
@@ -60,7 +60,7 @@ export function CoursePage () {
         <p>попробовать первую практику</p>
         <a href="#najfdskf" >free</a>
       </div>
-      <BuyButton title="купить"/>
+      <BaseButton title="купить"/>
     </div>
   );
 }

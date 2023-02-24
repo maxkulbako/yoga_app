@@ -14,9 +14,11 @@ export function ContentYoga () {
       </OverlayScrollbarsComponent>
       <div className="content_separator"></div>
       <OverlayScrollbarsComponent >
+        {/* <div className="temporary1"></div> */}
         <div className="side_wrapper right">
           <YogaNavMenu/>
         </div>
+        {/* <div className="temporary2"></div> */}
       </OverlayScrollbarsComponent>
     </main>
   );

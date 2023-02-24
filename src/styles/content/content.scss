@@ -13,12 +13,27 @@
   }
 }
 
+.temporary2 {
+  width: 80%;
+  margin: 0 auto;
+  height: 2px;
+  position: sticky;
+  bottom: 0;
+  background: black;
+  filter: blur(8px);
+  opacity: 1.5;
+  z-index: 10;
+  border-radius: 0 0 87% 87%;
+  box-shadow: -10px 0px 27px rgb(0 0 0 / 15%);
+}
+
 .side_wrapper {
   display: flex;
   flex-direction: column;
   gap: 50px;
   padding: 10px 70px;
-  overflow: auto;
+  overflow: hidden;
+
 
   @media screen and (max-width: 1000px) {
     padding-right: 30px;
