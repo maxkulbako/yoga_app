@@ -33,10 +33,10 @@ export const coursesMenuList = [
 ]
 
 export const navMenuList = [
-  {title: "о нане", link: "about/"},
-  {title: "йога", link: "yoga/"},
-  {title: "ретрит", link: "retreat/"},
-  {title: "контакты", link: "contacts/"}
+  {title: "о нане", link: "about"},
+  {title: "йога", link: "yoga"},
+  {title: "ретрит", link: "retreat"},
+  {title: "контакты", link: "contacts"}
 ]
 
 export const LOGO_BLACK = "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676218039/NANA_yoga_7_eqkeld.png"

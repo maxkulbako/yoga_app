@@ -232,6 +232,7 @@
 .title_block_wrapper {
   margin-bottom: 30px;
   padding: 0 70px;
+  position: relative;
 }
 @media screen and (max-width: 800px) {
   .title_block_wrapper {
@@ -244,10 +245,11 @@
   font-weight: 200;
   letter-spacing: 0.13em;
   line-height: 38px;
+  padding: 0 20px;
 }
 @media screen and (max-width: 1000px) {
   .title_block_wrapper .title_text_top {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -262,6 +264,19 @@
   border-radius: 4px;
 }
 
+.back_button_wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .back_button_wrapper {
+    display: block;
+  }
+}
+
 .main_wrapper {
   width: 100%;
   display: grid;
@@ -274,20 +289,6 @@
     padding: 0;
     overflow: unset;
   }
-}
-
-.temporary2 {
-  width: 80%;
-  margin: 0 auto;
-  height: 2px;
-  position: sticky;
-  bottom: 0;
-  background: black;
-  filter: blur(8px);
-  opacity: 1.5;
-  z-index: 10;
-  border-radius: 0 0 87% 87%;
-  box-shadow: -10px 0px 27px rgba(0, 0, 0, 0.15);
 }
 
 .side_wrapper {
@@ -568,7 +569,7 @@ p {
 
 .page_title {
   width: 100%;
-  height: 70px;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,10 +581,24 @@ p {
 .page_title p {
   font-family: "Raleway", sans-serif;
   font-weight: 100;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 56px;
   text-align: center;
   color: #FFF;
+}
+@media screen and (max-width: 1024px) {
+  .page_title p {
+    font-size: 30px;
+  }
+}
+
+.mobile_page_title {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+  color: #7A5334;
 }
 
 .video_button {
@@ -593,18 +608,16 @@ p {
   border-radius: 15px;
   border: none;
   width: 100%;
-  height: 270px;
+  height: 20vw;
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px;
 }
-.video_button svg {
-  color: #FFFFFF;
-  transition: ease-in 0.3s;
-}
-.video_button:hover > svg {
-  color: #639542;
+@media screen and (max-width: 800px) {
+  .video_button {
+    height: 40vw;
+  }
 }
 
 .page_text_block p {
@@ -746,6 +759,15 @@ svg {
   transition: 0.3s ease-in;
 }
 svg:hover {
+  color: #639542;
+}
+
+.video_svg svg {
+  width: 100px;
+  height: 100px;
+  color: #FFFFFF;
+}
+.video_svg svg:hover {
   color: #639542;
 }
 

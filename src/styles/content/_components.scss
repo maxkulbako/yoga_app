@@ -1,6 +1,7 @@
 .title_block_wrapper {
   margin-bottom: 30px;
   padding: 0 70px;
+  position: relative;
 
   @media screen and (max-width: 800px){
     padding: 0 10px;
@@ -12,9 +13,10 @@
     font-weight: 200;
     letter-spacing: 0.13em;
     line-height: 38px;
+    padding: 0 20px;
     
     @media screen and (max-width: 1000px){
-      font-size: 20px;
+      font-size: 26px;
      }
 
     @media screen and (max-width: 800px){
@@ -28,4 +30,18 @@
     background-color: #E5E0E0;
     border-radius: 4px;
   }
+}
+
+
+.back_button_wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+
 }

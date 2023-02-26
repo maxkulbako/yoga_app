@@ -10,3 +10,17 @@ svg {
     color: $color_accent;
   }
 }
+
+.video_svg {
+
+  svg {
+    width: 100px;
+    height: 100px;
+    color: #FFFFFF;
+
+    &:hover {
+      color: $color_accent;
+    }
+  }
+
+}

@@ -1,5 +1,5 @@
 import { SocialMediaSvg } from '../components/SocialMedia';
-import { BaseButton } from '../components';
+import { BaseButton } from '../components/Buttons/BaseButton';
 
 export function Contacts () {
   const icons = ['instagram', 'youtube', 'telegram', 'mail'];

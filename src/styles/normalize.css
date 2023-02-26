@@ -168,7 +168,10 @@ p {
  * 2. Remove the margin in Firefox and Safari.
  */
 
-button,
+button {
+  border: none;
+  background: none;
+},
 input,
 optgroup,
 select,
