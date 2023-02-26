@@ -10,13 +10,17 @@ export function StartPage ({ onStart, isStartOpen }) {
   return (
     <div
       className={`start_page_wrapper ${isStartOpen ? '' : 'close'}`}
-      onClick={onStart}
     >
       <div
         className="start_page"
         style={{ backgroundImage: `url(${backgroundImage})`}}
       >
-      <NavBar navList={navMenuList} variant="start" logo={LOGO_WHITE}/>
+      <NavBar 
+        navList={navMenuList}
+        variant="start"
+        logo={LOGO_WHITE}
+        onClick={onStart}
+        />
       </div>
     </div>
   );

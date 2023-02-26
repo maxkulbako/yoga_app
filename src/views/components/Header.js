@@ -5,10 +5,10 @@ import { StartPage } from "./StartPage";
 import React, {useState} from "react";
 import { useScrollDirection } from "../../core/hooks";
 
-
 export function Header () {
   const [isStartOpen, setOpenStart] = useState(true);
   const scrollDirection = useScrollDirection();
+
 
   const handleStartPage = () => {
     setOpenStart(!isStartOpen);
@@ -18,7 +18,11 @@ export function Header () {
     <div className="header_container">
       <StartPage onStart={handleStartPage} isStartOpen={isStartOpen} />
       <div className={`header_wrapper ${ scrollDirection === "down" ? "hide" : "show" }`}>
-        <NavBar onStart={handleStartPage} navList={navMenuList} logo={LOGO_BLACK}/>
+        <NavBar
+          onStart={handleStartPage}
+          navList={navMenuList}
+          logo={LOGO_BLACK}
+          />
         <MobileNavBar/>
       </div>
     </div>

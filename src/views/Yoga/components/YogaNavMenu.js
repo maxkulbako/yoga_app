@@ -1,5 +1,6 @@
-import {useState} from "react";
+import { useState } from "react";
 import { yogaMenuList } from "../../../core/constants/storage";
+import { actionChangeMainTitle } from '../../components/TitleBlock/actions';
 import { MenuButton } from "./MenuButton";
 import { connect } from "react-redux";
 
@@ -26,7 +27,7 @@ function ViewYogaNavMenu ({ menuList = yogaMenuList, changeTitle }) {
 }
 
 const mapDispatch = (dispatch) => ({
-  changeTitle: (title) => dispatch({ type: "CHANGE_TITLE", payload: title })
+  changeTitle: (title) => dispatch(actionChangeMainTitle(title))
 })
 
 export const YogaNavMenu =  connect(null, mapDispatch)(ViewYogaNavMenu)

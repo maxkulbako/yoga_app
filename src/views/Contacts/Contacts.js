@@ -8,10 +8,10 @@ export function Contacts () {
     <div className='contacts_page_container'>
       <div className='contacts_wrapper'>
         {
-          icons.map((id) => ( 
+          icons.map((id, index) => ( 
             <>
               <a href>
-                <ContactButton key={id} id={id} />
+                <ContactButton key={index} id={id} />
               </a>
               <div className='contacts_separator'></div>
             </>

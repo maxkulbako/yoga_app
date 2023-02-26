@@ -1,4 +1,5 @@
 import { createStore } from "redux";
+import { actionChangeMainTitle } from '../../views/components/TitleBlock/actions';
 
 const initialState = {
   activeMenuButton: ""
@@ -6,7 +7,7 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case "CHANGE_TITLE":
+    case actionChangeMainTitle.TYPE:
       return {
         ...state,
         activeMenuButton: action.payload

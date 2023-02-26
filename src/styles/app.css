@@ -245,6 +245,11 @@
   letter-spacing: 0.13em;
   line-height: 38px;
 }
+@media screen and (max-width: 1000px) {
+  .title_block_wrapper .title_text_top {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 800px) {
   .title_block_wrapper .title_text_top {
     text-align: center;
@@ -454,8 +459,7 @@
   height: 24px;
 }
 .social_media_wrapper svg {
-  width: 100%;
-  height: 100%;
+  color: #000000;
 }
 
 .footer_terms_privacy {
@@ -656,6 +660,35 @@ p {
   opacity: 0.5;
 }
 
+.base_btn_wrapper {
+  margin: 0 auto;
+  max-width: fit-content;
+  background-color: #AA7A54;
+  border-radius: 9px;
+  transition: 0.2s ease-in;
+}
+.base_btn_wrapper:hover {
+  filter: drop-shadow(0px 0px 5px #AA7A54);
+}
+.base_btn_wrapper button {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.base_btn_wrapper p {
+  min-width: 126px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 svg {
   color: #AA7A54;
 }
@@ -714,35 +747,6 @@ svg {
 }
 svg:hover {
   color: #639542;
-}
-
-.base_btn_wrapper {
-  margin: 0 auto;
-  max-width: fit-content;
-  background-color: #AA7A54;
-  border-radius: 9px;
-  transition: 0.2s ease-in;
-}
-.base_btn_wrapper:hover {
-  filter: drop-shadow(0px 0px 5px #AA7A54);
-}
-.base_btn_wrapper button {
-  width: 100%;
-  height: 100%;
-  padding: 12px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.base_btn_wrapper p {
-  min-width: 126px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #FFF;
-  text-transform: uppercase;
-  text-align: center;
 }
 
 .App {

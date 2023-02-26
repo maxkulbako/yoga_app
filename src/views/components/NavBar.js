@@ -1,9 +1,11 @@
-import {Fragment} from "react";
-import {Link, useLocation} from "react-router-dom";
+import { Fragment } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useDispatch  } from "react-redux";
+import { actionChangeMainTitle } from "./TitleBlock/actions";
 
-export function NavBar ({variant = null, navList, logo,  onClick, onStart}) {
+export function NavBar ({variant = null, navList, logo, onClick, onStart, onTitle}) {
   const location = useLocation();
-
+  const dispatch = useDispatch();
 
   return (
     <Fragment>
@@ -17,7 +19,7 @@ export function NavBar ({variant = null, navList, logo,  onClick, onStart}) {
           {
             navList.map(({title, link}) => (
               <Fragment key={title}>
-                <li>
+                <li onClick={() => dispatch(actionChangeMainTitle(title))}>
                   <Link
                     onClick={onClick}
                     className={`header_nav_link ${location.pathname.includes(link) ? 'active' : null}`}
