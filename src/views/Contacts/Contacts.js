@@ -1,5 +1,6 @@
 import { SocialMediaSvg } from '../components/SocialMedia';
 import { BaseButton } from '../components/Buttons/BaseButton';
+import { Fragment } from 'react';
 
 export function Contacts () {
   const icons = ['instagram', 'youtube', 'telegram', 'mail'];
@@ -8,13 +9,13 @@ export function Contacts () {
     <div className='contacts_page_container'>
       <div className='contacts_wrapper'>
         {
-          icons.map((id, index) => ( 
-            <>
+          icons.map((id) => ( 
+            <Fragment key={id}>
               <a href>
-                <ContactButton key={index} id={id} />
+                <ContactButton id={id} />
               </a>
               <div className='contacts_separator'></div>
-            </>
+            </Fragment>
           ))
         }
       </div>

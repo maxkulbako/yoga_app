@@ -12,7 +12,7 @@ export function MenuButton ({ title, background, link, isSelected, ...props}) {
 
       </div>
       <Link
-        to={`/yoga/${link}`}
+        to={`/yoga_app/yoga/${link}`}
         className={`content_menu_button ${isSelected ? 'selected' : ''}`}
         style={{ backgroundImage: `url(${background})`}}
         onClick={onClick}

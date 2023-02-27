@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 export function TitleBlock ({title}) {
   const location = useLocation();
-  const backButtonVisible = location.pathname.split('/').length > 2;
+  const backButtonVisible = location.pathname.split('/').length > 3;
   const isActive = title && title !== 'о нане' && title !== 'йога' && location.pathname !== '/yoga';
   
   const newPath = location.pathname.substring(

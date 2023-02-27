@@ -14,11 +14,10 @@ import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
 import { useMediaQuery } from "../hooks";
 
 const createRouter = process.env.ENV === 'gh-pages' ? createHashRouter : createBrowserRouter;
-const basename = process.env.ENV === 'gh-pages' ? '/yoga_app' : '/';
 
 export const router = createRouter([
   {
-    path: basename,
+    path: "yoga_app/",
     element: <App/>,
     errorElement: <ErrorPage />,
     children: [

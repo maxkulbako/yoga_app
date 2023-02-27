@@ -22,7 +22,7 @@ export function NavBar ({variant = null, navList, logo, onClick, onStart, onTitl
                 <li onClick={() => dispatch(actionChangeMainTitle(title))}>
                   <Link
                     onClick={onClick}
-                    className={`header_nav_link ${location.pathname.includes(link) ? 'active' : null}`}
+                    className={`header_nav_link ${location.pathname.split('/')[2].includes(link) ? 'active' : null}`}
                     to={link}>{title}</Link>
                 </li>
                 <div onClick={onClick} className="header_nav_separator"></div>
