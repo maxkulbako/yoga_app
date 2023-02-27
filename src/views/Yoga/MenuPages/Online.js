@@ -1,7 +1,7 @@
 export function Online () {
   return (
     <div>
-      Online
+      Online. This page is developing...
     </div>
   );
 }

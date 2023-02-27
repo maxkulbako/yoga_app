@@ -1,7 +1,7 @@
 import { NavBar } from "./NavBar";
 import { MobileNavBar } from "./MobileNavBar";
 import { LOGO_BLACK, navMenuList } from "../../core/constants/storage";
-import { StartPage } from "./StartPage";
+import { StartPage } from "../index";
 import React, {useState} from "react";
 import { useScrollDirection } from "../../core/hooks";
 

@@ -1,7 +1,7 @@
 export function About () {
   return (
     <div>
-      About
+      About. This page is developing...
     </div>
   );
 }

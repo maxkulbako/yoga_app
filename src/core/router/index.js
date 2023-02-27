@@ -2,7 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
 import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
-import { NewsPage, Online } from "../../views/Yoga/MenuPages";
+import {
+  NewsPage,
+  Online,
+  OfflinePage,
+  YoutubePage,
+  PersonalTreningPage
+} from "../../views/Yoga/MenuPages";
 import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
 import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
 import { useMediaQuery } from "../hooks";
@@ -38,6 +44,18 @@ export const router = createBrowserRouter([
           {
             path: "online/",
             element: <Online />,
+          },
+          {
+            path: "youtube/",
+            element: <YoutubePage />,
+          },
+          {
+            path: "offline/",
+            element: <OfflinePage />,
+          },
+          {
+            path: "pesonal/",
+            element: <PersonalTreningPage />,
           },
         ],
       },

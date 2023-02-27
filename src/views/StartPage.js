@@ -1,6 +1,6 @@
 import React from "react";
-import { NavBar } from "./NavBar"
-import {LOGO_WHITE, navMenuList} from "../../core/constants/storage";
+import { NavBar } from "./components/NavBar"
+import {LOGO_WHITE, navMenuList} from "../core/constants/storage";
 
 
 

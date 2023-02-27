@@ -1,7 +1,7 @@
 export function Retreat () {
   return (
     <div>
-      Retreat
+      Retreat. This page is developing...
     </div>
   );
 }

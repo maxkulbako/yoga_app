@@ -245,7 +245,6 @@
   font-weight: 200;
   letter-spacing: 0.13em;
   line-height: 38px;
-  padding: 0 20px;
 }
 @media screen and (max-width: 1000px) {
   .title_block_wrapper .title_text_top {
@@ -254,6 +253,7 @@
 }
 @media screen and (max-width: 800px) {
   .title_block_wrapper .title_text_top {
+    padding: 0 30px;
     text-align: center;
   }
 }

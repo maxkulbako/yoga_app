@@ -19,7 +19,7 @@ export const yogaMenuList = [
     background: "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676280712/nana_yoga/menu_img/%D0%BE%D1%84%D1%84%D0%BB%D0%B0%D0%B8%CC%86%D0%BD_m4tsbu.png"
   },
   {title: "индивидуальные занятия",
-    link: "indv",
+    link: "pesonal",
     background: "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676280762/nana_yoga/menu_img/%D0%B8%D0%BD%D0%B4%D0%B2_uqqa8k.jpg"
   }
 ]
