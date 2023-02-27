@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import App from "../../App";
 import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
@@ -13,7 +13,9 @@ import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
 import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
 import { useMediaQuery } from "../hooks";
 
-export const router = createBrowserRouter([
+const createRouter = process.env.ENV === 'gh-pages' ? createHashRouter : createBrowserRouter;
+
+export const router = createRouter([
   {
     path: "/",
     element: <App/>,

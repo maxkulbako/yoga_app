@@ -9,7 +9,6 @@ export function Header () {
   const [isStartOpen, setOpenStart] = useState(true);
   const scrollDirection = useScrollDirection();
 
-
   const handleStartPage = () => {
     setOpenStart(!isStartOpen);
   }
