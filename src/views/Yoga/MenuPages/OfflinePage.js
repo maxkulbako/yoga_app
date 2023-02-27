@@ -1,4 +1,4 @@
-export function OfflinePage () {
+export function OfflinePage() {
   return (
     <div>
       Offline. This page is developing...

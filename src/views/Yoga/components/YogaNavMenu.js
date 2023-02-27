@@ -1,33 +1,33 @@
-import { useState } from "react";
-import { yogaMenuList } from "../../../core/constants/storage";
+import { useState } from 'react';
+import { connect } from 'react-redux';
+import { yogaMenuList } from '../../../core/constants/storage';
 import { actionChangeMainTitle } from '../../components/TitleBlock/actions';
-import { MenuButton } from "./MenuButton";
-import { connect } from "react-redux";
+import { MenuButton } from './MenuButton';
 
-function ViewYogaNavMenu ({ menuList = yogaMenuList, changeTitle }) {
+function ViewYogaNavMenu({ menuList = yogaMenuList, changeTitle }) {
   const [active, setActive] = useState(null);
 
   return (
     <div>
-      { menuList.map(({title, background, link}, index) => (
+      { menuList.map(({ title, background, link }) => (
         <MenuButton
-          isSelected = {active === title}
+          isSelected={active === title}
           onClick={() => {
             setActive(title);
             changeTitle(title);
           }}
-          link={link} key={index}
+          link={link}
+          key={title}
           title={title}
-          background={background}>
-        </MenuButton>
-      ))
-      }
+          background={background}
+        />
+      ))}
     </div>
   );
 }
 
 const mapDispatch = (dispatch) => ({
-  changeTitle: (title) => dispatch(actionChangeMainTitle(title))
-})
+  changeTitle: (title) => dispatch(actionChangeMainTitle(title)),
+});
 
-export const YogaNavMenu =  connect(null, mapDispatch)(ViewYogaNavMenu)
+export const YogaNavMenu = connect(null, mapDispatch)(ViewYogaNavMenu);

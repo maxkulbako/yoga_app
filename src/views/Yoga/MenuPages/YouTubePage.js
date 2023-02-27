@@ -1,4 +1,4 @@
-export function YoutubePage () {
+export function YoutubePage() {
   return (
     <div>
       YouTube. This page is developing...

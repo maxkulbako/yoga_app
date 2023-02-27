@@ -1,24 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-export function MenuButton ({ title, background, link, isSelected, ...props}) {
+export function MenuButton({
+  title, background, link, isSelected, ...props
+}) {
   let onClick;
-  if(props) {
+  if (props) {
     onClick = props.onClick;
   }
 
   return (
     <div className="wrapper_content_menu_button">
-      <div className={`dot ${isSelected ? 'selected' : ''}`}>
-
-      </div>
+      <div className={`dot ${isSelected ? 'selected' : ''}`} />
       <Link
         to={`/yoga_app/yoga/${link}`}
         className={`content_menu_button ${isSelected ? 'selected' : ''}`}
-        style={{ backgroundImage: `url(${background})`}}
+        style={{ backgroundImage: `url(${background})` }}
         onClick={onClick}
       >
-      <p>
-        {title}
+        <p>
+          {title}
         </p>
       </Link>
     </div>

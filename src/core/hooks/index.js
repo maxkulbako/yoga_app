@@ -1,2 +1,2 @@
-export * from "./useMediaQuery";
-export * from "./useScrollDirection"
+export * from './useMediaQuery';
+export * from './useScrollDirection';

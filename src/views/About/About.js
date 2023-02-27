@@ -1,4 +1,4 @@
-export function About () {
+export function About() {
   return (
     <div>
       About. This page is developing...

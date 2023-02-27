@@ -1,4 +1,4 @@
-export function Retreat () {
+export function Retreat() {
   return (
     <div>
       Retreat. This page is developing...

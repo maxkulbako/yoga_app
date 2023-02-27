@@ -1,4 +1,4 @@
-export function createErrorAction (type) {
+export function createErrorAction(type) {
   const actionCreator = () => ({ type });
   actionCreator.TYPE = type;
 

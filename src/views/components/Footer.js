@@ -1,6 +1,6 @@
 import { SocialMediaSvg } from './SocialMedia';
 
-export function Footer () {
+export function Footer() {
   return (
     <footer className="footer_wrapper">
       <div className="footer_web">nana.yoga.com</div>
