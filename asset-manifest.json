@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yoga_app/static/css/main.a442b3e2.css",
+    "main.js": "/yoga_app/static/js/main.4b02e883.js",
+    "index.html": "/yoga_app/index.html",
+    "main.a442b3e2.css.map": "/yoga_app/static/css/main.a442b3e2.css.map",
+    "main.4b02e883.js.map": "/yoga_app/static/js/main.4b02e883.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a442b3e2.css",
+    "static/js/main.4b02e883.js"
+  ]
+}
