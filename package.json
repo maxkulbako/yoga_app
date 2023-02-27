@@ -27,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:gp": "ENV=gh-pages build",
+    "build:gp": "ENV=gh-pages react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build:gp",
     "deploy": "gh-pages -d build:gp"
