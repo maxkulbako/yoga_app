@@ -76,6 +76,11 @@ p {
      &:last-child {
        margin-bottom: 0;
      }
+
+     @media screen and (max-width: 800px) {
+      font-size: 16px;
+      text-align: center;
+    }
    }
 
   .telegram_link {
@@ -88,6 +93,13 @@ p {
       font-size: 13px;
       font-weight: 400;
       color: #976945;
+
+      @media screen and (max-width: 800px) {
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 auto 20px;
+      }
     }
   }
 }

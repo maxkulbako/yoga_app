@@ -35,7 +35,7 @@ export const coursesMenuList = [
 ];
 
 export const navMenuList = [
-  { title: 'о нане', link: 'about' },
+  { title: 'о Нане', link: 'about' },
   { title: 'йога', link: 'yoga' },
   { title: 'ретрит', link: 'retreat' },
   { title: 'контакты', link: 'contacts' },

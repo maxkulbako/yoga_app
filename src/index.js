@@ -5,6 +5,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { store } from './core/reducer/index';
 import './styles/index.css';
 import './styles/normalize.css';
+// eslint-disable-next-line import/no-unresolved
 import 'overlayscrollbars/overlayscrollbars.css';
 
 import { router } from './core/router';

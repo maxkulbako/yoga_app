@@ -130,6 +130,7 @@
       font-weight: 300;
       color: #000;
       position: relative;
+      text-transform: lowercase;
 
       @media screen and (min-width: 800px){
         &.active {

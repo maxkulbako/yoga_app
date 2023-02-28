@@ -16,7 +16,7 @@ const BootstrapDialog = styled(Dialog)(() => ({
 }));
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-// eslint-disable-next-line react/display-name
+// eslint-disable-next-line react/display-name, react/jsx-props-no-spreading
 const Transition = React.forwardRef((props, ref) => <Slide direction="down" ref={ref} {...props} />);
 
 export function MobileNavBar() {
