@@ -44,7 +44,7 @@ export function About() {
           <SocialMediaSvg id="youtube" />
         </div>
         <div className="action_button">
-          <BaseButton title="практиковаться с Наной" />
+          <BaseButton title="практиковать" />
         </div>
       </div>
     </div>

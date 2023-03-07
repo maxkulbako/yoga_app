@@ -4,7 +4,6 @@ import { BackButton } from '../Buttons/BackButton';
 export function TitleBlock({ title }) {
   const location = useLocation();
   const backButtonVisible = location.pathname.split('/').length > 3;
-  const isActive = title && title !== 'йога' && location.pathname !== '/yoga';
 
   const newPath = location.pathname.substring(
     0,
@@ -12,22 +11,15 @@ export function TitleBlock({ title }) {
   );
 
   return (
-
-    <div>
-      { isActive
-        && (
-        <div className="title_block_wrapper">
-          { backButtonVisible && <BackButton newPath={newPath} />}
-          <div
-            className="title_text_top"
-            style={{ textAlign: title === ('контакты' && 'о Нане') ? 'center' : null }}
-          >
-            {title !== ('контакты' && 'о Нане') ? `${title} с Наной` : title}
-          </div>
-          <div className="title_separator" />
-        </div>
-        )}
+    <div className="title_block_wrapper">
+      { backButtonVisible && <BackButton newPath={newPath} />}
+      <div
+        className="title_text_top"
+        style={{ textAlign: title === ('контакты' && 'о Нане') ? 'center' : null }}
+      >
+        {title}
+      </div>
+      <div className="title_separator" />
     </div>
-
   );
 }

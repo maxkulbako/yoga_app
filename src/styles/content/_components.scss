@@ -12,14 +12,14 @@
     font-size: 32px;
     font-weight: 200;
     letter-spacing: 0.13em;
-    line-height: 38px;
     
     @media screen and (max-width: 1000px){
       font-size: 26px;
      }
 
     @media screen and (max-width: 800px){
-      padding: 0 30px;
+      font-size: 20px;
+      padding: 0 40px;
       text-align: center;
     }
   }

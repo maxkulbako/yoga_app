@@ -98,7 +98,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
-    transition: width .2s, height .2s, margin-left .3s ;
+    transition: width .2s, height .2s, margin-left .3s;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+
+    overflow: hidden;
 
     &:hover {
       width: 103%;

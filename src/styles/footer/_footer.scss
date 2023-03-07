@@ -11,7 +11,9 @@
 
   @media  screen and (max-width: 1000px) {
     justify-content: center;
-    grid-template-areas: "web" "social_media" "copyright" "policy"
+    grid-template-areas: "web" "social_media" "copyright" "policy";
+    padding: 30px 20px 10px;
+    width: 80vw;
   }
 }
 
@@ -33,6 +35,10 @@
   font-family: "Raleway";
   font-size: 12px;
   font-weight: 500;
+
+  @media  screen and (max-width: 800px) {
+    text-align: center;
+  }
 }
 
 .social_media_wrapper {
@@ -59,6 +65,11 @@
   ul {
     display: flex;
     gap: 20px;
+
+    @media  screen and (max-width: 800px) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
     a {
       font-family: "Raleway";

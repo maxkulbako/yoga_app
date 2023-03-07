@@ -1,8 +1,25 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { actionChangeMainTitle } from '../TitleBlock/actions';
+import { navMenuList } from '../../../core/constants/storage';
 
 export function BackButton({ newPath }) {
+  const location = useLocation();
+  const mainPath = location.pathname.split('/')[2];
+  const dispatch = useDispatch();
+  let title;
+
+  if (location.pathname.split('/').length > 3) {
+    const activeMenu = navMenuList.find((menu) => menu.link === mainPath);
+    title = activeMenu.title;
+  }
+
   return (
-    <div className="back_button_wrapper">
+    <div
+      className="back_button_wrapper"
+      onClick={() => dispatch(actionChangeMainTitle(title))}
+      role="presentation"
+    >
       <Link to={newPath}>
         <button type="button">
           <svg width="29" height="29" viewBox="0 0 29 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

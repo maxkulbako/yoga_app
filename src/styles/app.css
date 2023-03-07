@@ -245,7 +245,6 @@
   font-size: 32px;
   font-weight: 200;
   letter-spacing: 0.13em;
-  line-height: 38px;
 }
 @media screen and (max-width: 1000px) {
   .title_block_wrapper .title_text_top {
@@ -254,7 +253,8 @@
 }
 @media screen and (max-width: 800px) {
   .title_block_wrapper .title_text_top {
-    padding: 0 30px;
+    font-size: 20px;
+    padding: 0 40px;
     text-align: center;
   }
 }
@@ -369,6 +369,11 @@
   background-size: cover;
   background-position: 0px;
   transition: width 0.2s, height 0.2s, margin-left 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  overflow: hidden;
 }
 .wrapper_content_menu_button .content_menu_button:hover {
   width: 103%;
@@ -426,6 +431,8 @@
   .footer_wrapper {
     justify-content: center;
     grid-template-areas: "web" "social_media" "copyright" "policy";
+    padding: 30px 20px 10px;
+    width: 80vw;
   }
 }
 
@@ -447,6 +454,11 @@
   font-family: "Raleway";
   font-size: 12px;
   font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .footer_copyright {
+    text-align: center;
+  }
 }
 
 .social_media_wrapper {
@@ -471,6 +483,12 @@
 .footer_terms_privacy ul {
   display: flex;
   gap: 20px;
+}
+@media screen and (max-width: 800px) {
+  .footer_terms_privacy ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 .footer_terms_privacy ul a {
   font-family: "Raleway";
@@ -630,12 +648,6 @@ p {
 .page_text_block p:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 800px) {
-  .page_text_block p {
-    font-size: 16px;
-    text-align: center;
-  }
-}
 .page_text_block .telegram_link {
   margin-bottom: 20px;
 }
@@ -647,14 +659,6 @@ p {
   font-size: 13px;
   font-weight: 400;
   color: #976945;
-}
-@media screen and (max-width: 800px) {
-  .page_text_block .telegram_link a {
-    display: block;
-    font-size: 16px;
-    text-align: center;
-    margin: 0 auto 20px;
-  }
 }
 
 .try_button_block {
@@ -683,8 +687,8 @@ p {
 
 .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
   max-height: 8%;
-  width: 5px;
-  background: grey;
+  width: 3px;
+  background: rgb(128, 126, 126);
   opacity: 0.5;
 }
 
@@ -715,6 +719,11 @@ p {
   color: #FFF;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .base_btn_wrapper p {
+    text-transform: lowercase;
+  }
 }
 
 svg {
@@ -791,6 +800,7 @@ svg:hover {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   padding: 0 70px;
+  margin-bottom: 100px;
 }
 @media screen and (max-width: 800px) {
   .about_contant_wrapper {
@@ -846,16 +856,15 @@ svg:hover {
 .text_section_wrapper .text_block p:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 800px) {
-  .text_section_wrapper .text_block p {
-    font-size: 16px;
-    text-align: center;
-  }
-}
 
 .social_media_block {
   display: flex;
   gap: 30px;
+}
+@media screen and (max-width: 800px) {
+  .social_media_block {
+    display: none;
+  }
 }
 
 .action_button {

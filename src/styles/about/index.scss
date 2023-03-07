@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   padding: 0 70px;
+  margin-bottom: 100px;
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
@@ -57,17 +58,17 @@
         margin-bottom: 0;
       }
 
-      @media screen and (max-width: 800px) {
-        font-size: 16px;
-        text-align: center;
-      }
     }
   }
 }
 
 .social_media_block {
   display: flex;
-  gap: 30px
+  gap: 30px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .action_button {
