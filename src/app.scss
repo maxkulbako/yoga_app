@@ -1,0 +1,24 @@
+.App {
+  margin: 0 auto;
+  max-width: 1288px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+
+  @media screen and (max-width: 800px) {
+    padding: 0;
+  }
+}
+
+.os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
+  max-height: 8%;
+  width: 3px;
+  background: rgb(128, 126, 126);
+  opacity: 0.5;
+}
+
+.os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
+  height: 10%;
+}

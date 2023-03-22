@@ -1,0 +1,22 @@
+svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+
+  &:hover {
+    color: #639542;
+  }
+}
+
+.video_svg {
+  svg {
+    width: 100px;
+    height: 100px;
+    color: #ffffff;
+
+    &:hover {
+      color: #639542;
+    }
+  }
+}

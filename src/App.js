@@ -1,7 +1,7 @@
-import './styles/app.css';
-import { Outlet } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { Header, Footer, TitleBlock } from './views/components';
+import "./app.scss";
+import { Outlet } from "react-router-dom";
+import { connect } from "react-redux";
+import { Header, Footer, TitleBlock } from "./views/components";
 
 function App({ title }) {
   return (

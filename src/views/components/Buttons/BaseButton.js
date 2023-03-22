@@ -1,4 +1,4 @@
-import "../../../styles/base_components/base_button.scss";
+import "./base_button.scss";
 
 export function BaseButton({ title }) {
   return (

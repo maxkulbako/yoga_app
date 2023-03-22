@@ -1,78 +1,75 @@
-import { createBrowserRouter, createHashRouter } from 'react-router-dom';
-import App from '../../App';
-import {
-  Contacts, About, Retreat, ContentYoga,
-} from '../../views';
-import ErrorPage from './ErrorPage';
-import {
-  NewsPage,
-  Online,
-  OfflinePage,
-  YoutubePage,
-  PersonalTreningPage,
-} from '../../views/Yoga/MenuPages';
-import { Courses, CoursesList, CoursePage } from '../../views/Yoga/Courses';
-import { YogaNavMenu } from '../../views/Yoga/components/YogaNavMenu';
-import { useMediaQuery } from '../hooks';
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
+import App from "../../App";
+import { Contacts, About, Retreat, ContentYoga } from "../../views";
+import ErrorPage from "./ErrorPage";
+import { NewsPage } from "../../views/Yoga/News";
+import { Online } from "../../views/Yoga/Online";
+import { YoutubePage } from "../../views/Yoga/YouTube";
+import { OfflinePage } from "../../views/Yoga/Offline";
+import { PersonalTreningPage } from "../../views/Yoga/Personal";
+import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
+import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
+import { useMediaQuery } from "../hooks";
 
-const createRouter = process.env.ENV === 'gh-pages' ? createHashRouter : createBrowserRouter;
+const createRouter =
+  process.env.ENV === "gh-pages" ? createHashRouter : createBrowserRouter;
 
 export const router = createRouter([
   {
-    path: 'yoga_app/',
+    path: "yoga_app/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: 'yoga/',
+        path: "yoga/",
         element: <ContentYoga />,
         children: [
           {
-            path: '',
+            path: "",
             element: <StartElement />,
           },
           {
-            path: 'course/',
+            path: "course/",
             element: <Courses />,
             children: [
               {
-                path: '',
+                path: "",
                 element: <CoursesList />,
               },
               {
-                path: ':titleID',
+                path: ":titleID",
                 element: <CoursePage />,
               },
             ],
           },
           {
-            path: 'online/',
+            path: "online/",
             element: <Online />,
           },
           {
-            path: 'youtube/',
+            path: "youtube/",
             element: <YoutubePage />,
           },
           {
-            path: 'offline/',
+            path: "offline/",
             element: <OfflinePage />,
           },
           {
-            path: 'pesonal/',
+            path: "pesonal/",
             element: <PersonalTreningPage />,
           },
         ],
       },
       {
-        path: 'contacts/',
+        path: "contacts/",
         element: <Contacts />,
       },
       {
-        path: 'about/',
+        path: "about/",
         element: <About />,
       },
       {
-        path: 'retreat/',
+        path: "retreat/",
         element: <Retreat />,
       },
     ],
@@ -80,7 +77,7 @@ export const router = createRouter([
 ]);
 
 function StartElement() {
-  const isDesktop = useMediaQuery('(min-width: 800px)');
+  const isDesktop = useMediaQuery("(min-width: 800px)");
 
   return isDesktop ? <NewsPage /> : <YogaNavMenu />;
 }
