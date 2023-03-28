@@ -4,3 +4,4 @@ export * from "./TitleBlock";
 export * from "./Buttons";
 export * from "./Navbars";
 export * from "./Header";
+export * from "./Modal";

@@ -11,9 +11,7 @@ import { router } from "./core/router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <ReduxProvider store={store}>
-      <RouterProvider router={router} />
-    </ReduxProvider>
-  </React.StrictMode>
+  <ReduxProvider store={store}>
+    <RouterProvider router={router} />
+  </ReduxProvider>
 );

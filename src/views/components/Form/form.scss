@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.form_title {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34px;
+  color: #c7956d;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form_subtitle {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b3b3ba;
+}
+
+.form_input,
+.form_textarea {
+  input,
+  textarea {
+    font-family: "Montserrat";
+    border: none;
+    border-radius: 8px;
+    height: 56px;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &::placeholder {
+      color: #b3b3ba;
+      line-height: 26px;
+    }
+  }
+
+  textarea {
+    height: 130px;
+    padding: 15px;
+    word-wrap: break-word;
+    resize: none;
+    &::placeholder {
+      color: #b3b3ba;
+      line-height: 26px;
+    }
+  }
+
+  span {
+    display: none;
+    font-size: 12px;
+    color: rgb(240, 14, 14);
+    padding: 5px;
+  }
+
+  input:invalid[focused="true"] ~ span {
+    display: block;
+  }
+}
