@@ -1,13 +1,19 @@
+import { useState } from "react";
 import "./form.scss";
 
-export function FormTextArea(props) {
-  const { errorMessage, ...other } = props;
-
+export function FormTextArea({ name, placeholder, onChange }) {
+  const [focused, setFocused] = useState(false);
   return (
     <div className="form_input">
-      {/* <label>{label}</label> */}
-      <textarea {...other} />
-      <span>{errorMessage}</span>
+      <textarea
+        type="text"
+        name={name}
+        placeholder={placeholder}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={() => setFocused(true)}
+        focused={focused.toString()}
+      />
+      {/* <span>{errorMessage}</span> */}
     </div>
   );
 }

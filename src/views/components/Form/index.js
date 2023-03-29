@@ -1,84 +1,76 @@
 import { FormInput } from "./FormInput";
-import { FormTextArea } from "./FormTextArea";
+// import { FormTextArea } from "./FormTextArea";
 import { BaseButton } from "../Buttons";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 import "./form.scss";
-import { useState } from "react";
+
+const schema = yup
+  .object(
+    {
+      name: yup.string().required(),
+      message: yup.string().required("Обязательное поле"),
+      telegram: yup
+        .string()
+        .notRequired()
+        .when("mail", {
+          is: (value) => !value?.length,
+          then: (rule) => rule.required("telegram or mail are requred"),
+        }),
+      mail: yup.string().email(),
+    },
+    [["mail", "mail"]]
+  )
+  .required();
 
 export function Form() {
-  const [values, setValues] = useState({
-    Имя: "",
-    Сообшения: "",
-    "@telegram": "",
-    email: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(schema) });
 
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.placeholder]: e.target.value });
+  let props = { ...register("name") };
+
+  console.log(props);
+
+  const onSubmit = (data) => {
+    console.log(data);
   };
-
-  const inputs = {
-    name: {
-      label: "name",
-      placeholder: "Имя",
-      type: "text",
-      onChange: onChange,
-      value: values.name,
-      teg: "input",
-      errorMessage:
-        "Имя должно содержать не менее 3х букв и начинаться с заглавной",
-      required: true,
-      pattern: "^[А-ЯA-Z][а-яa-z]{2,16}$",
-    },
-    messages: {
-      label: "messages",
-      placeholder: "Сообшения",
-      type: "text",
-      onChange: onChange,
-      value: values["Сообшения"],
-      errorMessage:
-        "Имя должно содержать не менне 3х имсволов и начинаться с заглавной буквы",
-      required: true,
-      pattern: "Макс",
-    },
-    telegram: {
-      label: "@telegram",
-      placeholder: "@telegram",
-      type: "text",
-      onChange: onChange,
-      value: values["@telegram"],
-      errorMessage: "Некорректный ник_нейм",
-      required: true,
-      pattern: "^@[a-zA-Z0-9_]+$",
-    },
-    email: {
-      label: "email",
-      placeholder: "email",
-      type: "text",
-      onChange: onChange,
-      value: values["email"],
-      errorMessage: "Неверный формат email",
-      required: true,
-      pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$",
-    },
-  };
-
-  console.log(values);
 
   return (
-    <form>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <p className="form_title">Как мы можем Вам помочь?</p>
       <div className="message block">
-        <FormInput {...inputs.name} />
-        <FormTextArea {...inputs.messages} />
+        <FormInput
+          placeholder="Имя"
+          {...register("name")}
+          errorMessage={errors.name?.message}
+        />
+        <div className="form_input">
+          <textarea placeholder="Сообщение" {...register("message")} />
+          <span>{errors.message?.message}</span>
+        </div>
       </div>
       <div className="contacts block">
         <p className="form_subtitle">как с вами связаться</p>
-        <FormInput {...inputs.telegram} />
-        <FormInput {...inputs.email} />
+        <div className="form_input">
+          <input placeholder="@telegram" {...register("telegram")} />
+          <span>{errors.telegram?.message}</span>
+        </div>
+        <div className="form_input">
+          <input placeholder="Email" {...register("mail")} />
+          <span>{errors.mail?.message}</span>
+        </div>
       </div>
       <div>
-        <BaseButton title="Отправить сообщение" variant="in_form" />
+        <BaseButton
+          type="submit"
+          title="Отправить сообщение"
+          variant="in_form"
+        />
       </div>
     </form>
   );
