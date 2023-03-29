@@ -4,6 +4,7 @@ import { BaseButton } from "../Buttons";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import axios from "axios";
 
 import "./form.scss";
 
@@ -29,6 +30,7 @@ export function Form() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
@@ -37,6 +39,17 @@ export function Form() {
   console.log(props);
 
   const onSubmit = (data) => {
+    console.log(data);
+
+    // axios
+    //   .post(
+    //     "https://sheet.best/api/sheets/6b6f264a-b636-48af-a475-1b77d863f740/tabs/Sheet_2",
+    //     data
+    //   )
+    //   .then((response) => console.log(response));
+
+    reset({});
+    data = {};
     console.log(data);
   };
 
