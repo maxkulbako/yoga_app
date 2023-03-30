@@ -4,7 +4,15 @@ import { connect } from "react-redux";
 import { Header, Footer, TitleBlock, Modal } from "./views/components";
 import ModalProvider from "./views/components/Modal/ModalContext";
 
-function App({ title }) {
+export function App() {
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
+}
+
+function Main({ title }) {
   return (
     <ModalProvider>
       <div className="App">
@@ -22,4 +30,4 @@ const mapState = (state) => ({
   title: state.activeMenuButton,
 });
 
-export default connect(mapState)(App);
+export default connect(mapState)(Main);

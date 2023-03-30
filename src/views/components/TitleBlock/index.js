@@ -5,7 +5,7 @@ import "./title.scss";
 
 export function TitleBlock({ title }) {
   const location = useLocation();
-  const backButtonVisible = location.pathname.split("/").length > 3;
+  const backButtonVisible = location.pathname.split("/").length > 4;
 
   const newPath = location.pathname.substring(
     0,

@@ -1,5 +1,5 @@
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
-import App from "../../App";
+import Main from "../../App";
 import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
 import { NewsPage } from "../../views/Yoga/News";
@@ -10,6 +10,8 @@ import { PersonalTreningPage } from "../../views/Yoga/Personal";
 import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
 import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
 import { useMediaQuery } from "../hooks";
+import { StartPage } from "../../views";
+import { App } from "../../App";
 
 const createRouter =
   process.env.ENV === "gh-pages" ? createHashRouter : createBrowserRouter;
@@ -21,56 +23,67 @@ export const router = createRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "yoga/",
-        element: <ContentYoga />,
+        path: "",
+        element: <StartPage />,
+      },
+      {
+        path: "main/",
+        element: <Main />,
+        errorElement: <ErrorPage />,
         children: [
           {
-            path: "",
-            element: <StartElement />,
-          },
-          {
-            path: "course/",
-            element: <Courses />,
+            path: "yoga/",
+            element: <ContentYoga />,
             children: [
               {
                 path: "",
-                element: <CoursesList />,
+                element: <StartElement />,
               },
               {
-                path: ":titleID",
-                element: <CoursePage />,
+                path: "course/",
+                element: <Courses />,
+                children: [
+                  {
+                    path: "",
+                    element: <CoursesList />,
+                  },
+                  {
+                    path: ":titleID",
+                    element: <CoursePage />,
+                  },
+                ],
+              },
+              {
+                path: "online/",
+                element: <Online />,
+              },
+              {
+                path: "youtube/",
+                element: <YoutubePage />,
+              },
+              {
+                path: "offline/",
+                element: <OfflinePage />,
+              },
+              {
+                path: "pesonal/",
+                element: <PersonalTreningPage />,
               },
             ],
           },
           {
-            path: "online/",
-            element: <Online />,
+            path: "contacts/",
+            element: <Contacts />,
           },
           {
-            path: "youtube/",
-            element: <YoutubePage />,
+            path: "about/",
+            element: <About />,
           },
           {
-            path: "offline/",
-            element: <OfflinePage />,
-          },
-          {
-            path: "pesonal/",
-            element: <PersonalTreningPage />,
+            path: "retreat/",
+            element: <Retreat />,
           },
         ],
-      },
-      {
-        path: "contacts/",
-        element: <Contacts />,
-      },
-      {
-        path: "about/",
-        element: <About />,
-      },
-      {
-        path: "retreat/",
-        element: <Retreat />,
       },
     ],
   },

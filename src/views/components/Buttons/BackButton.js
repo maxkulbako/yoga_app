@@ -7,7 +7,7 @@ import "./back_button.scss";
 
 export function BackButton({ newPath }) {
   const location = useLocation();
-  const mainPath = location.pathname.split("/")[2];
+  const mainPath = location.pathname.split("/")[3];
   const dispatch = useDispatch();
   let title;
 
@@ -24,13 +24,7 @@ export function BackButton({ newPath }) {
     >
       <Link to={newPath}>
         <button type="button">
-          <svg
-            width="29"
-            height="29"
-            viewBox="0 0 29 29"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="29" height="29" viewBox="0 0 29 29" fill="currentColor">
             <path
               d="M14.5001 27.0651C12.8587 27.0678 11.2329 26.7463 9.71609 26.1191C8.19925 25.4919 6.82122 24.5713 5.66112 23.4101C0.787115 18.5361 0.787115 10.6061 5.66112 5.73207C8.02212 3.37107 11.1611 2.07007 14.5001 2.07007C17.8391 2.07007 20.9781 3.37007 23.3391 5.73207C28.2131 10.6061 28.2131 18.5361 23.3391 23.4101C22.179 24.5713 20.801 25.4919 19.2841 26.1191C17.7673 26.7463 16.1415 27.0678 14.5001 27.0651ZM7.07512 21.9961C11.1691 26.0901 17.8311 26.0901 21.9251 21.9961C23.9081 20.0121 25.0001 17.3751 25.0001 14.5711C25.0001 11.7671 23.9081 9.13007 21.9251 7.14607C19.9421 5.16207 17.3051 4.07007 14.5001 4.07007C11.6951 4.07007 9.05912 5.16307 7.07512 7.14607C5.09112 9.12907 4.00012 11.7661 4.00012 14.5711C4.00012 17.3761 5.09212 20.0121 7.07512 21.9961Z"
               fill="currentColor"

@@ -9,7 +9,7 @@ export function About() {
       <div className="img_wrapper">
         <img
           alt="ava_img"
-          src="https://res.cloudinary.com/dd69ztxsd/image/upload/v1677590264/nana_yoga/IMG_2448_m2cw1o.jpg"
+          src="https://res.cloudinary.com/dd69ztxsd/image/upload/v1680197635/nana_yoga/ava_nana-min_1_noy1mn_bkqhqh.jpg"
         />
       </div>
       <div className="text_section_wrapper">

@@ -15,14 +15,10 @@ export function NavBar({ variant = null, navList, logo, onClick, onStart }) {
 
   return (
     <>
-      <div
-        className={`logo_wrapper ${variant}`}
-        onClick={onStart}
-        role="presentation"
-      >
-        <button type="button">
+      <div className={`logo_wrapper ${variant}`} role="presentation">
+        <Link to="/yoga_app" type="button">
           <img alt="logo" src={logo} />
-        </button>
+        </Link>
       </div>
       <nav className={`nav_wrapper ${variant}`}>
         <ul className={variant ? "start" : ""}>
@@ -37,7 +33,7 @@ export function NavBar({ variant = null, navList, logo, onClick, onStart }) {
                   className={`header_nav_link ${
                     location.includes(link) ? "active" : null
                   }`}
-                  to={link}
+                  to={`/yoga_app/main/${link}`}
                 >
                   {title}
                 </Link>
