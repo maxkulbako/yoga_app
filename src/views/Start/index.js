@@ -5,7 +5,7 @@ import { LOGO_WHITE, navMenuList } from "../../core/constants/storage";
 import "./_startpage.scss";
 
 const backgroundImage =
-  "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676986970/nana_yoga/IMG_5287_vt7u6s.jpg";
+  "https://res.cloudinary.com/dd69ztxsd/image/upload/v1680187131/nana_yoga/start_img_aesq0c.jpg";
 
 export function StartPage({ onStart, isStartOpen }) {
   return (
