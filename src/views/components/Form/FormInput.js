@@ -2,11 +2,17 @@ import React, { forwardRef } from "react";
 import "./form.scss";
 
 export const FormInput = forwardRef(
-  ({ placeholder, errorMessage, ...props }, ref) => {
-    console.log(props);
+  ({ type, placeholder, errorMessage, ...props }, ref) => {
+    const InputComponent = type === "textarea" ? "textarea" : "input";
+
     return (
       <div className="form_input">
-        <input type="text" placeholder={placeholder} {...props} ref={ref} />
+        <InputComponent
+          type={type}
+          placeholder={placeholder}
+          {...props}
+          ref={ref}
+        />
         <span>{errorMessage}</span>
       </div>
     );

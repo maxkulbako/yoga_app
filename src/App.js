@@ -2,16 +2,19 @@ import "./app.scss";
 import { Outlet } from "react-router-dom";
 import { connect } from "react-redux";
 import { Header, Footer, TitleBlock, Modal } from "./views/components";
+import ModalProvider from "./views/components/Modal/ModalContext";
 
 function App({ title }) {
   return (
-    <div className="App">
-      <Modal />
-      <Header />
-      <TitleBlock title={title} />
-      <Outlet />
-      <Footer />
-    </div>
+    <ModalProvider>
+      <div className="App">
+        <Modal />
+        <Header />
+        <TitleBlock title={title} />
+        <Outlet />
+        <Footer />
+      </div>
+    </ModalProvider>
   );
 }
 
