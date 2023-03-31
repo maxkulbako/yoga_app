@@ -1,5 +1,5 @@
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
-import Main from "../../App";
+import { Main } from "../../Main";
 import { Contacts, About, Retreat, ContentYoga } from "../../views";
 import ErrorPage from "./ErrorPage";
 import { NewsPage } from "../../views/Yoga/News";

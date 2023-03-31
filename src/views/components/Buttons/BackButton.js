@@ -11,6 +11,8 @@ export function BackButton({ newPath }) {
   const dispatch = useDispatch();
   let title;
 
+  // console.log(location.pathname.split("/"));
+
   if (location.pathname.split("/").length > 3) {
     const activeMenu = navMenuList.find((menu) => menu.link === mainPath);
     title = activeMenu.title;

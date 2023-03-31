@@ -1,17 +1,17 @@
 import { Fragment } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { actionChangeMainTitle } from "../TitleBlock/actions";
+// import { useDispatch } from "react-redux";
+// import { actionChangeMainTitle } from "../TitleBlock/actions";
 
 import "./navbars.scss";
 
-export function NavBar({ variant = null, navList, logo, onClick, onStart }) {
-  let location = useLocation().pathname;
-  const dispatch = useDispatch();
+export function NavBar({ variant = null, navList, logo }) {
+  // let location = useLocation().pathname;
+  // // const dispatch = useDispatch();
 
-  if (location.split("/").length > 2) {
-    location = location.split("/")[2];
-  } else location = location.split("/")[1];
+  // if (location.split("/").length > 2) {
+  //   location = location.split("/")[2];
+  // } else location = location.split("/")[1];
 
   return (
     <>
@@ -25,21 +25,22 @@ export function NavBar({ variant = null, navList, logo, onClick, onStart }) {
           {navList.map(({ title, link }) => (
             <Fragment key={title}>
               <li
-                onClick={() => dispatch(actionChangeMainTitle(title))}
+                // onClick={() => dispatch(actionChangeMainTitle(title))}
                 role="presentation"
               >
                 <Link
-                  onClick={onClick}
-                  className={`header_nav_link ${
-                    location.includes(link) ? "active" : null
-                  }`}
+                  className="header_nav_link"
+                  // onClick={onClick}
+                  // className={`header_nav_link ${
+                  //   location.includes(link) ? "active" : null
+                  // }`}
                   to={`/yoga_app/main/${link}`}
                 >
                   {title}
                 </Link>
               </li>
               <div
-                onClick={onClick}
+                // onClick={onClick}
                 className="header_nav_separator"
                 role="presentation"
               />

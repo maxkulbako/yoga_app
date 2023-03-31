@@ -1,8 +1,8 @@
-import { createStore } from 'redux';
-import { actionChangeMainTitle } from '../../views/components/TitleBlock/actions';
+import { createStore } from "redux";
+import { actionChangeMainTitle } from "../../views/components/TitleBlock/actions";
 
 const initialState = {
-  activeMenuButton: '',
+  activeMenuButton: "",
 };
 
 function rootReducer(state = initialState, action = {}) {

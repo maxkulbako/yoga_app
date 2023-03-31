@@ -43,6 +43,7 @@ export function MobileNavBar() {
         fullScreen
         open={open}
         onClose={handleClose}
+        onClick={handleClose}
         TransitionComponent={Transition}
       >
         <IconButton
@@ -57,7 +58,7 @@ export function MobileNavBar() {
           navList={navMenuList}
           logo={LOGO_WHITE}
           variant="mobile"
-          onClick={handleClose}
+          // onClick={handleClose}
         />
       </BootstrapDialog>
     </div>
