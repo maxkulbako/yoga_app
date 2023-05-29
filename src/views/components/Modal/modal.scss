@@ -27,8 +27,8 @@
   .modal_close_btn {
     position: absolute;
     width: fit-content;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 
     svg {
       width: 24px;
@@ -41,28 +41,6 @@
       }
     }
   }
-}
-
-.fetching_wrpper {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.fetching {
-  margin: 10vh auto;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px dashed #dadae2;
-  animation: fetching 1.3s alternate infinite;
-  align-self: center;
-  z-index: 200;
 }
 
 @keyframes fetching {

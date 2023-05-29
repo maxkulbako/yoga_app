@@ -135,15 +135,17 @@
     border-radius: 50%;
     position: absolute;
     top: 50%;
+    left: -50px;
     z-index: -1;
     transition: 0.5s ease-in;
+    transform: scale(0);
 
     &.selected {
-      margin-left: -50px;
+      transform: scale(1);
+    }
 
-      @media screen and (max-width: 1000px) {
-        margin-left: -30px;
-      }
+    @media screen and (max-width: 1000px) {
+      left: -30px;
     }
   }
 }

@@ -75,7 +75,7 @@ export function CoursePage() {
         <p>попробовать первую практику</p>
         <a href="#najfdskf">free</a>
       </div>
-      <BaseButton onClick={() => setActive(true)} title="купить" />
+      <BaseButton onClick={() => setActive("test")} title="купить" />
     </div>
   );
 }

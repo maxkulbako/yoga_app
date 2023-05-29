@@ -16,6 +16,12 @@ import { App } from "../../App";
 const createRouter =
   process.env.ENV === "gh-pages" ? createHashRouter : createBrowserRouter;
 
+function StartElement() {
+  const isDesktop = useMediaQuery("(min-width: 800px)");
+
+  return isDesktop ? <NewsPage /> : <YogaNavMenu />;
+}
+
 export const router = createRouter([
   {
     path: "yoga_app/",
@@ -88,9 +94,3 @@ export const router = createRouter([
     ],
   },
 ]);
-
-function StartElement() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
-
-  return isDesktop ? <NewsPage /> : <YogaNavMenu />;
-}
