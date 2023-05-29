@@ -71,13 +71,7 @@ export function SocialMediaSvg({ id }) {
 
     case "youtube":
       return (
-        <svg
-          width="24"
-          height="17"
-          viewBox="0 0 24 17"
-          fill="currentCollor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="24" height="17" viewBox="0 0 24 17" fill="currentCollor">
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -95,7 +89,7 @@ export function SocialMediaSvg({ id }) {
             height="109"
             viewBox="0 0 109 109"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => window.open("https://www.youtube.com/", "_blank")}
           >
             <rect
               x="10"

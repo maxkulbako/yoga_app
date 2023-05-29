@@ -4,7 +4,7 @@ import { ModalContext } from "../../components/Modal/ModalContext";
 import { BaseButton } from "../../components";
 
 export function Online() {
-  const { setActive } = useContext(ModalContext);
+  const { setActiveContant } = useContext(ModalContext);
 
   return (
     <div className="section_wrapper">
@@ -36,7 +36,7 @@ export function Online() {
         <p>Стоимость: 20€ (в месяц)</p>
       </div>
       <BaseButton
-        onClick={() => setActive("online")}
+        onClick={() => setActiveContant("online")}
         title="отправить сообщение"
       />
     </div>

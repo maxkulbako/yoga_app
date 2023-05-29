@@ -23,7 +23,7 @@
   }
 
   .news_img {
-    max-width: 400px;
+    width: 400px;
     height: 217px;
     background-size: cover;
     background-position: 0;
@@ -34,7 +34,7 @@
     align-items: center;
 
     svg {
-      color: #FFFFFF;
+      color: #ffffff;
       transition: ease-in 0.3s;
     }
 

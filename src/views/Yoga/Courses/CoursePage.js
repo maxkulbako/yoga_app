@@ -9,7 +9,7 @@ import { ModalContext } from "../../components/Modal/ModalContext";
 import "./courses.scss";
 
 export function CoursePage() {
-  const { setActive } = useContext(ModalContext);
+  const { setActiveContant } = useContext(ModalContext);
   const isDesktop = useMediaQuery("(min-width: 800px)");
   const { titleID } = useParams();
   const { title, background } = coursesMenuList.find(
@@ -75,7 +75,7 @@ export function CoursePage() {
         <p>попробовать первую практику</p>
         <a href="#najfdskf">free</a>
       </div>
-      <BaseButton onClick={() => setActive("test")} title="купить" />
+      <BaseButton onClick={() => setActiveContant("test")} title="купить" />
     </div>
   );
 }
