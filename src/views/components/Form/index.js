@@ -33,7 +33,7 @@ const schema = yup
 
 const formVariant = {
   online_group: "Оставьте свои данные для записи",
-  test: "test test test",
+  personal: "Записаться на индивидуальные занятия",
 };
 
 export function Form({ variant }) {

@@ -5,7 +5,7 @@ import { ModalContext } from "./ModalContext";
 import "./modal.scss";
 
 const modalContent = {
-  test: <Form variant="test" />,
+  personal: <Form variant="personal" />,
   online: <Form variant="online_group" />,
 };
 
