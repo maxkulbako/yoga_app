@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
-export * from './CoursePage';
-export * from './CoursesList';
+export * from "./CoursePage";
+export * from "./CoursesList";
 
 export function Courses() {
   return (

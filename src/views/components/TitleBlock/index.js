@@ -1,6 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { BackButton } from "../Buttons/BackButton";
-import { navMenuList, yogaMenuList } from "../../../core/constants/storage";
+import {
+  navMenuList,
+  yogaMenuList,
+  retreatMenuList,
+} from "../../../core/constants/storage";
 
 import "./title.scss";
 
@@ -14,7 +18,18 @@ export function TitleBlock() {
   );
 
   let title;
-  if (location.pathname.split("/").length > 4) {
+  if (
+    location.pathname.includes("retreat") &&
+    location.pathname.split("/").length > 4
+  ) {
+    console.log(location.pathname.split("/")[4]);
+    console.log(retreatMenuList.find((i) => i.link === "inside").title);
+    // title = retreatMenuList.find((i) => i.link === "inside").title;
+    //title = "inside";
+    title = retreatMenuList.find(
+      (i) => i.link === location.pathname.split("/")[4]
+    ).title;
+  } else if (location.pathname.split("/").length > 4) {
     title = yogaMenuList.find(
       (i) => i.link === location.pathname.split("/")[4]
     ).title;

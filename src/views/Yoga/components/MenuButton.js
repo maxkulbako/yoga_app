@@ -10,7 +10,7 @@ export function MenuButton({ title, background, link, isSelected, ...props }) {
     <div className="wrapper_content_menu_button">
       <div className={`dot ${isSelected ? "selected" : ""}`} />
       <Link
-        to={`/yoga_app/main/yoga/${link}`}
+        to={link}
         className={`content_menu_button ${isSelected ? "selected" : ""}`}
         style={{ backgroundImage: `url(${background})` }}
         onClick={onClick}

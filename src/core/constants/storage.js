@@ -64,6 +64,21 @@ export const coursesMenuList = [
   // },
 ];
 
+export const retreatMenuList = [
+  {
+    title: "вглубь",
+    link: "inside",
+    background:
+      "https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1685699694/nana_yoga/retreat/IMG_Carpathians_xptk05.jpg",
+  },
+  {
+    title: "карпаты",
+    link: "carpathians",
+    background:
+      "https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1685699700/nana_yoga/retreat/IMG_inside_wm6jef.jpg",
+  },
+];
+
 export const navMenuList = [
   { title: "о Нане", link: "about" },
   { title: "йога", link: "yoga" },

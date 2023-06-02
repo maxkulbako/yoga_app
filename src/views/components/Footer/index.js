@@ -1,7 +1,11 @@
 import "./_footer.scss";
 import { SocialMediaSvg } from "../SocialMedia";
+import { useContext } from "react";
+import { ModalContext } from "../../components/Modal/ModalContext";
 
 export function Footer() {
+  const { setActiveContant } = useContext(ModalContext);
+
   return (
     <footer className="footer_wrapper">
       <div className="footer_web">nana.yoga.com</div>
@@ -15,9 +19,15 @@ export function Footer() {
       </div>
       <div className="footer_terms_privacy">
         <ul>
-          <a href="#234">Terms & Conditions</a>
-          <a href="#234">Privacy Policy</a>
-          <a href="#234">Cookies Policy</a>
+          <a href="#234" onClick={() => setActiveContant("termsConditions")}>
+            Terms & Conditions
+          </a>
+          <a onClick={() => setActiveContant("privacyPolicy")} href="#234">
+            Privacy Policy
+          </a>
+          <a onClick={() => setActiveContant("cookieFiles")} href="#234">
+            Cookies Policy
+          </a>
           <a href="#234">Security</a>
         </ul>
       </div>

@@ -11,6 +11,9 @@ import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
 import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
 import { useMediaQuery } from "../hooks";
 import { StartPage } from "../../views";
+import { RetreatPage } from "../../views/Retreat/RetreatPage";
+import { RetreatStartPage } from "../../views";
+import { RetreatNavMenu } from "../../views/Retreat/components/RetreatNavMenu";
 import { App } from "../../App";
 
 const createRouter =
@@ -20,6 +23,12 @@ function StartElement() {
   const isDesktop = useMediaQuery("(min-width: 800px)");
 
   return isDesktop ? <NewsPage /> : <YogaNavMenu />;
+}
+
+function StartRetreatElement() {
+  const isDesktop = useMediaQuery("(min-width: 800px)");
+
+  return isDesktop ? <RetreatStartPage /> : <RetreatNavMenu />;
 }
 
 export const router = createRouter([
@@ -88,6 +97,16 @@ export const router = createRouter([
           {
             path: "retreat/",
             element: <Retreat />,
+            children: [
+              {
+                path: "",
+                element: <StartRetreatElement />,
+              },
+              {
+                path: ":titleID",
+                element: <RetreatPage />,
+              },
+            ],
           },
         ],
       },

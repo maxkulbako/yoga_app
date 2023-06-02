@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { Form } from "../Form";
 import { ModalContext } from "./ModalContext";
+import { termsConditions, privacyPolicy, cookieFiles } from "../Footer/terms";
 
 import "./modal.scss";
 
 const modalContent = {
   personal: <Form variant="personal" />,
   online: <Form variant="online_group" />,
+  termsConditions: termsConditions,
+  privacyPolicy: privacyPolicy,
+  cookieFiles: cookieFiles,
 };
 
 export function Modal() {

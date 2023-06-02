@@ -52,6 +52,17 @@
   }
 }
 
+.side_wrapper.left {
+  @media screen and (max-width: 1000px) {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
 .content_separator {
   width: 3px;
   height: auto;
@@ -147,5 +158,18 @@
     @media screen and (max-width: 1000px) {
       left: -30px;
     }
+  }
+}
+
+.side_wrapper.left {
+  .content_menu_button {
+    &.selected {
+      margin-left: -20px;
+    }
+  }
+
+  .dot {
+    right: -50px;
+    left: auto;
   }
 }

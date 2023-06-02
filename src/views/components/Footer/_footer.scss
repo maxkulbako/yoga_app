@@ -1,6 +1,6 @@
 .footer_wrapper {
   width: 100%;
-  padding: 50px 0 30px 20px;
+  padding: 50px 0 30px 0;
   margin: 0 auto;
   display: grid;
   grid-template-areas: "web web web" "copyright social_media policy";
@@ -83,4 +83,18 @@
 
 .test {
   color: #000;
+}
+
+.law_information {
+  padding: 30px 50px 30px 30px;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+
+  p:last-child {
+    padding-bottom: 50px;
+  }
 }

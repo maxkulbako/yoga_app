@@ -8,7 +8,7 @@ export function CoursesList({ ContentMenuList = coursesMenuList }) {
         <MenuButton
           key={title}
           title={title}
-          link={`course/${link}`}
+          link={link}
           background={background}
         />
       ))}
