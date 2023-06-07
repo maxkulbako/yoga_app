@@ -4,6 +4,11 @@ form {
   flex-direction: column;
   width: 510px;
   padding: 30px;
+
+  @media screen and (max-width: 800px) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .form_title {
