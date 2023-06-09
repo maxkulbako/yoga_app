@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/yoga_app/static/css/main.3c6eb8e9.css",
-    "main.js": "/yoga_app/static/js/main.568798b2.js",
+    "main.js": "/yoga_app/static/js/main.a2b7f937.js",
     "index.html": "/yoga_app/index.html",
     "main.3c6eb8e9.css.map": "/yoga_app/static/css/main.3c6eb8e9.css.map",
-    "main.568798b2.js.map": "/yoga_app/static/js/main.568798b2.js.map"
+    "main.a2b7f937.js.map": "/yoga_app/static/js/main.a2b7f937.js.map"
   },
   "entrypoints": [
     "static/css/main.3c6eb8e9.css",
-    "static/js/main.568798b2.js"
+    "static/js/main.a2b7f937.js"
   ]
 }
