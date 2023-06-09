@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Form } from "../Form";
 import { ModalContext } from "./ModalContext";
 import { termsConditions, privacyPolicy, cookieFiles } from "../Footer/terms";
+import { PaymentPage } from "../../Yoga/components/PaymentPage";
 
 import "./modal.scss";
 
@@ -11,6 +12,7 @@ const modalContent = {
   termsConditions: termsConditions,
   privacyPolicy: privacyPolicy,
   cookieFiles: cookieFiles,
+  pay: <PaymentPage/>
 };
 
 export function Modal() {

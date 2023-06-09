@@ -1,15 +1,12 @@
 import { useParams } from "react-router-dom";
 import { coursesMenuList } from "../../../core/constants/storage";
-import { BaseButton } from "../../components";
 import { SocialMediaSvg } from "../../components/SocialMedia";
 import { useMediaQuery } from "../../../core/hooks";
-import { useContext } from "react";
-import { ModalContext } from "../../components/Modal/ModalContext";
+import { PaymentWidget } from "../components/PaymentPage";
 
 import "./courses.scss";
 
 export function CoursePage() {
-  const { setActiveContant } = useContext(ModalContext);
   const isDesktop = useMediaQuery("(min-width: 800px)");
   const { titleID } = useParams();
   const { title, background } = coursesMenuList.find(
@@ -75,7 +72,7 @@ export function CoursePage() {
         <p>попробовать первую практику</p>
         <a href="#najfdskf">free</a>
       </div>
-      <BaseButton onClick={() => setActiveContant("test")} title="купить" />
+      <PaymentWidget />
     </div>
   );
 }
