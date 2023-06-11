@@ -3,16 +3,24 @@ import { retreatMenuList } from "../../core/constants/storage";
 import { BaseButton } from "../components";
 import { useContext } from "react";
 import { ModalContext } from "../components/Modal/ModalContext";
+import { SocialMediaSvg } from "../components/SocialMedia";
 
 export function RetreatPage() {
   const { setActiveContant } = useContext(ModalContext);
   const { titleID } = useParams();
-  const { title } = retreatMenuList.find((page) => page.link === titleID);
+  const { background } = retreatMenuList.find((page) => page.link === titleID);
 
   return (
     <div className="page_container">
-      <p className="mobile_page_title">{title}</p>
-
+      <button
+        type="button"
+        className="video_button"
+        style={{
+          backgroundImage: `url(${background})`,
+        }}
+      >
+        <SocialMediaSvg id="video" />
+        </button>
       <div className="page_text_block">
         <p>
           Если вы ощущаете необходимость выдохнуть, расслабиться и отпустить -
@@ -21,11 +29,12 @@ export function RetreatPage() {
           эта практика приблизит вас к вам же.
         </p>
 
-        <BaseButton
-          onClick={() => setActiveContant("test")}
-          title="присоединиться"
-        />
+
       </div>
+      <BaseButton
+          onClick={() => setActiveContant("retreat")}
+          title="принять участие"
+        />
     </div>
   );
 }

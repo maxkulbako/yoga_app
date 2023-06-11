@@ -9,6 +9,7 @@ import "./modal.scss";
 const modalContent = {
   personal: <Form variant="personal" />,
   online: <Form variant="online_group" />,
+  retreat: <Form variant="retreat"/>,
   termsConditions: termsConditions,
   privacyPolicy: privacyPolicy,
   cookieFiles: cookieFiles,
