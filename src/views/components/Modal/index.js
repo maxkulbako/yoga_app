@@ -1,26 +1,26 @@
-import { useContext } from "react";
-import { Form } from "../Form";
-import { ModalContext } from "./ModalContext";
-import { termsConditions, privacyPolicy, cookieFiles } from "../Footer/terms";
-import { PaymentPage } from "../../Yoga/components/PaymentPage";
+import { useContext } from 'react';
+import { Form } from '../Form';
+import { ModalContext } from './ModalContext';
+import { termsConditions, privacyPolicy, cookieFiles } from '../Footer/terms';
+import { PaymentPage } from '../../Yoga/components/PaymentPage';
 
-import "./modal.scss";
+import './modal.scss';
 
 const modalContent = {
   personal: <Form variant="personal" />,
   online: <Form variant="online_group" />,
-  retreat: <Form variant="retreat"/>,
+  retreat: <Form variant="retreat" />,
   termsConditions: termsConditions,
   privacyPolicy: privacyPolicy,
   cookieFiles: cookieFiles,
-  pay: <PaymentPage/>
+  pay: <PaymentPage />,
 };
 
 export function Modal() {
   const { activeContant, setActiveContant } = useContext(ModalContext);
 
   return (
-    <div className={activeContant ? "modal_wrapper active" : "modal_wrapper"}>
+    <div className={activeContant ? 'modal_wrapper active' : 'modal_wrapper'}>
       <div className="modal_content">
         <button
           className="modal_close_btn"

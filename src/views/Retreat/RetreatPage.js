@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
-import { retreatMenuList } from "../../core/constants/storage";
-import { BaseButton } from "../components";
-import { useContext } from "react";
-import { ModalContext } from "../components/Modal/ModalContext";
-import { SocialMediaSvg } from "../components/SocialMedia";
+import { useParams } from 'react-router-dom';
+import { retreatMenuList } from '../../core/constants/storage';
+import { BaseButton } from '../components';
+import { useContext } from 'react';
+import { ModalContext } from '../components/Modal/ModalContext';
+import { SocialMediaSvg } from '../components/SocialMedia';
 
 export function RetreatPage() {
   const { setActiveContant } = useContext(ModalContext);
@@ -20,7 +20,7 @@ export function RetreatPage() {
         }}
       >
         <SocialMediaSvg id="video" />
-        </button>
+      </button>
       <div className="page_text_block">
         <p>
           Если вы ощущаете необходимость выдохнуть, расслабиться и отпустить -
@@ -28,13 +28,11 @@ export function RetreatPage() {
           30 минут наедине с собой. Без лишнего напряжения, свободная и легкая,
           эта практика приблизит вас к вам же.
         </p>
-
-
       </div>
       <BaseButton
-          onClick={() => setActiveContant("retreat")}
-          title="принять участие"
-        />
+        onClick={() => setActiveContant('retreat')}
+        title="принять участие"
+      />
     </div>
   );
 }
