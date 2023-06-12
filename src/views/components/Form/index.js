@@ -51,7 +51,7 @@ export function Form({ variant }) {
   const onSubmit = (data) => {
     setFetching(true);
 
-    const { name, message, telegram, email } = data;
+    const { name, message, telegram, mail } = data;
 
     setTimeout(() => {
       setFetching(false);
@@ -59,7 +59,7 @@ export function Form({ variant }) {
     }, 2000);
 
     const url =
-      'https://script.google.com/macros/s/AKfycbzHmmqUElgeRPbXl6ufk_ouzbfph8m9ABJZ-zeW44BWuSiuzjyKJGpUfs95C3B5ahU8/exec';
+      'https://script.google.com/macros/s/AKfycbzjEIxe1Rdee2Ur4K-UNCcDdx7D7F9jJa49Tndq8UXWTq64gQ8l03Od7yt-gW_SfHyy/exec';
 
     axios
       .post(
@@ -68,7 +68,7 @@ export function Form({ variant }) {
           name,
           message,
           telegram,
-          email,
+          mail,
           variant,
         },
         {
