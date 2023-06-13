@@ -1,19 +1,17 @@
-import { Link, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { actionChangeMainTitle } from "../TitleBlock/actions";
-import { navMenuList } from "../../../core/constants/storage";
+import { Link, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { actionChangeMainTitle } from '../TitleBlock/actions';
+import { navMenuList } from '../../../core/constants/storage';
 
-import "./back_button.scss";
+import './back_button.scss';
 
 export function BackButton({ newPath }) {
   const location = useLocation();
-  const mainPath = location.pathname.split("/")[3];
+  const mainPath = location.pathname.split('/')[3];
   const dispatch = useDispatch();
   let title;
 
-  // console.log(location.pathname.split("/"));
-
-  if (location.pathname.split("/").length > 3) {
+  if (location.pathname.split('/').length > 3) {
     const activeMenu = navMenuList.find((menu) => menu.link === mainPath);
     title = activeMenu.title;
   }

@@ -40,7 +40,7 @@ form {
 
   input,
   textarea {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     border: none;
     border-radius: 8px;
     height: 56px;
@@ -58,7 +58,7 @@ form {
   }
 
   textarea {
-    height: 130px;
+    height: 100px;
     padding: 15px;
     word-wrap: break-word;
     resize: none;
@@ -107,11 +107,16 @@ form {
 
   p {
     width: fit-content;
+    text-align: center;
   }
 
   svg {
     color: #aa7a54;
     width: 60px;
     height: 60px;
+  }
+
+  span {
+    font-size: 40px;
   }
 }

@@ -1,41 +1,37 @@
-import { useLocation } from "react-router-dom";
-import { BackButton } from "../Buttons/BackButton";
+import { useLocation } from 'react-router-dom';
+import { BackButton } from '../Buttons/BackButton';
 import {
   navMenuList,
   yogaMenuList,
   retreatMenuList,
-} from "../../../core/constants/storage";
+} from '../../../core/constants/storage';
 
-import "./title.scss";
+import './title.scss';
 
 export function TitleBlock() {
   const location = useLocation();
-  const backButtonVisible = location.pathname.split("/").length > 4;
+  const backButtonVisible = location.pathname.split('/').length > 4;
 
   const newPath = location.pathname.substring(
     0,
-    location.pathname.lastIndexOf("/")
+    location.pathname.lastIndexOf('/')
   );
 
   let title;
   if (
-    location.pathname.includes("retreat") &&
-    location.pathname.split("/").length > 4
+    location.pathname.includes('retreat') &&
+    location.pathname.split('/').length > 4
   ) {
-    console.log(location.pathname.split("/")[4]);
-    console.log(retreatMenuList.find((i) => i.link === "inside").title);
-    // title = retreatMenuList.find((i) => i.link === "inside").title;
-    //title = "inside";
     title = retreatMenuList.find(
-      (i) => i.link === location.pathname.split("/")[4]
+      (i) => i.link === location.pathname.split('/')[4]
     ).title;
-  } else if (location.pathname.split("/").length > 4) {
+  } else if (location.pathname.split('/').length > 4) {
     title = yogaMenuList.find(
-      (i) => i.link === location.pathname.split("/")[4]
+      (i) => i.link === location.pathname.split('/')[4]
     ).title;
   } else {
     title = navMenuList.find(
-      (i) => i.link === location.pathname.split("/")[3]
+      (i) => i.link === location.pathname.split('/')[3]
     ).title;
   }
 
@@ -45,7 +41,7 @@ export function TitleBlock() {
       <div
         className="title_text_top"
         style={{
-          textAlign: title === ("контакты" && "о Нане") ? "center" : null,
+          textAlign: title === ('контакты' && 'о Нане') ? 'center' : null,
         }}
       >
         {title}

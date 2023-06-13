@@ -18,6 +18,7 @@ const schema = yup
         .required('* обязательное поле')
         .min(3, 'имя должно содержать не менне 3х символов'),
       message: yup.string().required('* обязательное поле'),
+      wishes: yup.string(),
       telegram: yup
         .string()
         .notRequired()
@@ -40,7 +41,7 @@ const formVariant = {
 export function Form({ variant }) {
   const { setActiveContant } = useContext(ModalContext);
   const [isFetching, setFetching] = useState(false);
-  const [isSubmit, setSubmit] = useState(false);
+  const [isSubmit, setSubmit] = useState('');
 
   const {
     register,
@@ -51,15 +52,10 @@ export function Form({ variant }) {
   const onSubmit = (data) => {
     setFetching(true);
 
-    const { name, message, telegram, mail } = data;
-
-    setTimeout(() => {
-      setFetching(false);
-      setSubmit(true);
-    }, 2000);
+    const { name, message, telegram, mail, wishes } = data;
 
     const url =
-      'https://script.google.com/macros/s/AKfycbzjEIxe1Rdee2Ur4K-UNCcDdx7D7F9jJa49Tndq8UXWTq64gQ8l03Od7yt-gW_SfHyy/exec';
+      'https://script.google.com/macros/s/AKfycbwDT6WYhpczODLMBB4yev2mUW0qCHTBTi_wL739hCiwmRt52DKb-Q6gaKsvzTRAPQ/exec';
 
     axios
       .post(
@@ -70,6 +66,7 @@ export function Form({ variant }) {
           telegram,
           mail,
           variant,
+          wishes,
         },
         {
           headers: {
@@ -79,15 +76,19 @@ export function Form({ variant }) {
       )
       .then(function (response) {
         console.log(response);
+        setFetching(false);
+        setSubmit('success');
       })
       .catch(function (error) {
         console.log('Произошла ошибка', error);
+        setFetching(false);
+        setSubmit('error');
       });
   };
 
   return (
     <>
-      {!isSubmit ? (
+      {isSubmit === '' && (
         <form onSubmit={handleSubmit(onSubmit)}>
           {isFetching && (
             <div className="fetching_wrapper">
@@ -107,6 +108,14 @@ export function Form({ variant }) {
               {...register('message')}
               errorMessage={errors.message?.message}
             />
+            {variant === 'retreat' && (
+              <FormInput
+                type="textarea"
+                placeholder="wishes"
+                {...register('wishes')}
+                errorMessage={errors.wishes?.wishes}
+              />
+            )}
           </div>
           <div className="contacts block">
             <p className="form_subtitle">как с вами связаться</p>
@@ -129,7 +138,8 @@ export function Form({ variant }) {
             />
           </div>
         </form>
-      ) : (
+      )}
+      {isSubmit === 'success' && (
         <div className="successful_fetching">
           <p>сообщение отправлено</p>
           <svg
@@ -195,6 +205,16 @@ export function Form({ variant }) {
               setActiveContant(false);
             }}
           />
+        </div>
+      )}
+      {isSubmit === 'error' && (
+        <div className="successful_fetching">
+          <p>что-то пошло не так...</p>
+          <span>😕</span>
+          <p>
+            повторите пожалуйста попытку позже или свяжитесь с нами другим
+            способом
+          </p>
         </div>
       )}
     </>
