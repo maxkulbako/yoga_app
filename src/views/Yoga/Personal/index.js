@@ -1,7 +1,7 @@
-import "./personal.scss";
-import { BaseButton } from "../../components";
-import { useContext } from "react";
-import { ModalContext } from "../../components/Modal/ModalContext";
+import './personal.scss';
+import { BaseButton } from '../../components';
+import { useContext } from 'react';
+import { ModalContext } from '../../components/Modal/ModalContext';
 
 export function PersonalTreningPage() {
   const { setActiveContant } = useContext(ModalContext);
@@ -30,7 +30,7 @@ export function PersonalTreningPage() {
         <p>благодарим.</p>
       </div>
       <BaseButton
-        onClick={() => setActiveContant("personal")}
+        onClick={() => setActiveContant('personal')}
         title="записаться"
       />
     </div>

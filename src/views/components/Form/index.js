@@ -36,6 +36,7 @@ const formVariant = {
   online_group: 'Оставьте свои данные для записи',
   personal: 'Записаться на индивидуальные занятия',
   retreat: 'Принять участие в ретрите',
+  cooperation: 'Чем мы можем Вам помочь?',
 };
 
 export function Form({ variant }) {

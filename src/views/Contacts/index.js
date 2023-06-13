@@ -1,11 +1,14 @@
-import { Fragment } from "react";
-import { SocialMediaSvg } from "../components/SocialMedia";
-import { BaseButton } from "../components/Buttons/BaseButton";
+import { Fragment } from 'react';
+import { SocialMediaSvg } from '../components/SocialMedia';
+import { BaseButton } from '../components/Buttons/BaseButton';
+import { ModalContext } from '../components/Modal/ModalContext';
+import { useContext } from 'react';
 
-import "./contacts.scss";
+import './contacts.scss';
 
 export function Contacts() {
-  const icons = ["instagram", "youtube", "telegram", "mail"];
+  const { setActiveContant } = useContext(ModalContext);
+  const icons = ['instagram', 'youtube', 'telegram', 'mail'];
 
   return (
     <div className="contacts_page_container">
@@ -19,7 +22,10 @@ export function Contacts() {
           </Fragment>
         ))}
       </div>
-      <BaseButton title="для сотрудничества и предложений" />
+      <BaseButton
+        onClick={() => setActiveContant('cooperation')}
+        title="для сотрудничества и предложений"
+      />
     </div>
   );
 }
