@@ -1,109 +1,102 @@
-import { createBrowserRouter, createHashRouter } from "react-router-dom";
-import { Main } from "../../Main";
-import { Contacts, About, Retreat, ContentYoga } from "../../views";
-import ErrorPage from "./ErrorPage";
-import { NewsPage } from "../../views/Yoga/News";
-import { Online } from "../../views/Yoga/Online";
-import { YoutubePage } from "../../views/Yoga/YouTube";
-import { OfflinePage } from "../../views/Yoga/Offline";
-import { PersonalTreningPage } from "../../views/Yoga/Personal";
-import { Courses, CoursesList, CoursePage } from "../../views/Yoga/Courses";
-import { YogaNavMenu } from "../../views/Yoga/components/YogaNavMenu";
-import { useMediaQuery } from "../hooks";
-import { StartPage } from "../../views";
-import { RetreatPage } from "../../views/Retreat/RetreatPage";
-import { RetreatStartPage } from "../../views";
-import { RetreatNavMenu } from "../../views/Retreat/components/RetreatNavMenu";
-import { App } from "../../App";
+import { createBrowserRouter, createHashRouter } from 'react-router-dom';
+import { Main } from '../../Main';
+import { Contacts, About, Retreat, ContentYoga } from '../../views';
+import ErrorPage from './ErrorPage';
+import { NewsPage } from '../../views/Yoga/News';
+import { Online } from '../../views/Yoga/Online';
+import { YoutubePage } from '../../views/Yoga/YouTube';
+import { OfflinePage } from '../../views/Yoga/Offline';
+import { PersonalTreningPage } from '../../views/Yoga/Personal';
+import { Courses, CoursesList, CoursePage } from '../../views/Yoga/Courses';
+import { YogaNavMenu } from '../../views/Yoga/components/YogaNavMenu';
+import { StartPage } from '../../views';
+import { RetreatPage } from '../../views/Retreat/RetreatPage';
+import { RetreatStartPage } from '../../views';
+import { RetreatNavMenu } from '../../views/Retreat/components/RetreatNavMenu';
+import { App } from '../../App';
 
 const createRouter =
-  process.env.ENV === "gh-pages" ? createHashRouter : createBrowserRouter;
-
-function StartElement() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
-
-  return isDesktop ? <NewsPage /> : <YogaNavMenu />;
-}
-
-function StartRetreatElement() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
-
-  return isDesktop ? <RetreatStartPage /> : <RetreatNavMenu />;
-}
+  process.env.ENV === 'gh-pages' ? createHashRouter : createBrowserRouter;
 
 export const router = createRouter([
   {
-    path: "yoga_app/",
+    path: 'yoga_app/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        path: '',
         element: <StartPage />,
       },
       {
-        path: "main/",
+        path: 'main/',
         element: <Main />,
         errorElement: <ErrorPage />,
         children: [
           {
-            path: "yoga/",
+            path: 'yoga/',
             element: <ContentYoga />,
             children: [
               {
-                path: "",
-                element: <StartElement />,
+                path: '',
+                element:
+                  window.innerWidth >= 800 ? <NewsPage /> : <YogaNavMenu />,
               },
               {
-                path: "course/",
+                path: 'course/',
                 element: <Courses />,
                 children: [
                   {
-                    path: "",
+                    path: '',
                     element: <CoursesList />,
                   },
                   {
-                    path: ":titleID",
+                    path: ':titleID',
                     element: <CoursePage />,
                   },
                 ],
               },
               {
-                path: "online/",
+                path: 'online/',
                 element: <Online />,
               },
               {
-                path: "youtube/",
+                path: 'youtube/',
                 element: <YoutubePage />,
               },
               {
-                path: "offline/",
+                path: 'offline/',
                 element: <OfflinePage />,
               },
               {
-                path: "pesonal/",
+                path: 'pesonal/',
                 element: <PersonalTreningPage />,
               },
             ],
           },
           {
-            path: "contacts/",
+            path: 'contacts/',
             element: <Contacts />,
           },
           {
-            path: "about/",
+            path: 'about/',
             element: <About />,
           },
           {
-            path: "retreat/",
+            path: 'retreat/',
             element: <Retreat />,
             children: [
               {
-                path: "",
-                element: <StartRetreatElement />,
+                path: '',
+                element:
+                  window.innerWidth >= 800 ? (
+                    <RetreatStartPage />
+                  ) : (
+                    <RetreatNavMenu />
+                  ),
               },
               {
-                path: ":titleID",
+                path: ':titleID',
                 element: <RetreatPage />,
               },
             ],

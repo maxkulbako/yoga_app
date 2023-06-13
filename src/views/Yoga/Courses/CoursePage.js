@@ -1,13 +1,12 @@
-import { useParams } from "react-router-dom";
-import { coursesMenuList } from "../../../core/constants/storage";
-import { SocialMediaSvg } from "../../components/SocialMedia";
-import { useMediaQuery } from "../../../core/hooks";
-import { PaymentWidget } from "../components/PaymentPage";
+import { useParams } from 'react-router-dom';
+import { coursesMenuList } from '../../../core/constants/storage';
+import { SocialMediaSvg } from '../../components/SocialMedia';
+import { PaymentWidget } from '../components/PaymentPage';
 
-import "./courses.scss";
+import './courses.scss';
 
 export function CoursePage() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
+  const isDesktop = window.innerWidth >= 800;
   const { titleID } = useParams();
   const { title, background } = coursesMenuList.find(
     (page) => page.link === titleID
