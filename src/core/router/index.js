@@ -20,12 +20,12 @@ const createRouter =
 
 export const router = createRouter([
   {
-    path: 'yoga_app/',
+    path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '',
+        path: '/',
         element: <StartPage />,
       },
       {

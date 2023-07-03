@@ -10,7 +10,7 @@ import './title.scss';
 
 export function TitleBlock() {
   const location = useLocation();
-  const backButtonVisible = location.pathname.split('/').length > 4;
+  const backButtonVisible = location.pathname.split('/').length > 3;
 
   const newPath = location.pathname.substring(
     0,
@@ -20,18 +20,18 @@ export function TitleBlock() {
   let title;
   if (
     location.pathname.includes('retreat') &&
-    location.pathname.split('/').length > 4
+    location.pathname.split('/').length > 3
   ) {
     title = retreatMenuList.find(
-      (i) => i.link === location.pathname.split('/')[4]
+      (i) => i.link === location.pathname.split('/')[3]
     ).title;
-  } else if (location.pathname.split('/').length > 4) {
+  } else if (location.pathname.split('/').length > 3) {
     title = yogaMenuList.find(
-      (i) => i.link === location.pathname.split('/')[4]
+      (i) => i.link === location.pathname.split('/')[3]
     ).title;
   } else {
     title = navMenuList.find(
-      (i) => i.link === location.pathname.split('/')[3]
+      (i) => i.link === location.pathname.split('/')[2]
     ).title;
   }
 

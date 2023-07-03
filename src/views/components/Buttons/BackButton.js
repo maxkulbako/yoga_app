@@ -7,7 +7,7 @@ import './back_button.scss';
 
 export function BackButton({ newPath }) {
   const location = useLocation();
-  const mainPath = location.pathname.split('/')[3];
+  const mainPath = location.pathname.split('/')[2];
   const dispatch = useDispatch();
   let title;
 

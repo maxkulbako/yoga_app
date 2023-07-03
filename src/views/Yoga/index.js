@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
-import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
-import { YogaNavMenu } from "./components/YogaNavMenu";
+import { Outlet } from 'react-router-dom';
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
+import { YogaNavMenu } from './components/YogaNavMenu';
 
-import "./yoga.scss";
+import './yoga.scss';
 
 export function ContentYoga() {
   return (

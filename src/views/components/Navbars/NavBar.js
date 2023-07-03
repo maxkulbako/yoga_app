@@ -1,9 +1,9 @@
-import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 // import { useDispatch } from "react-redux";
 // import { actionChangeMainTitle } from "../TitleBlock/actions";
 
-import "./navbars.scss";
+import './navbars.scss';
 
 export function NavBar({ variant = null, navList, logo }) {
   // let location = useLocation().pathname;
@@ -16,12 +16,12 @@ export function NavBar({ variant = null, navList, logo }) {
   return (
     <>
       <div className={`logo_wrapper ${variant}`} role="presentation">
-        <Link to="/yoga_app" type="button">
+        <Link to="/" type="button">
           <img alt="logo" src={logo} />
         </Link>
       </div>
       <nav className={`nav_wrapper ${variant}`}>
-        <ul className={variant ? "start" : ""}>
+        <ul className={variant ? 'start' : ''}>
           {navList.map(({ title, link }) => (
             <Fragment key={title}>
               <li
@@ -34,7 +34,7 @@ export function NavBar({ variant = null, navList, logo }) {
                   // className={`header_nav_link ${
                   //   location.includes(link) ? "active" : null
                   // }`}
-                  to={`/yoga_app/main/${link}`}
+                  to={`/main/${link}`}
                 >
                   {title}
                 </Link>
