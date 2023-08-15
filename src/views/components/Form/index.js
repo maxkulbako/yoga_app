@@ -33,10 +33,22 @@ const schema = yup
   .required();
 
 const formVariant = {
-  online_group: 'Оставьте свои данные для записи',
-  personal: 'Записаться на индивидуальные занятия',
-  retreat: 'Принять участие в ретрите',
-  cooperation: 'Чем мы можем Вам помочь?',
+  online_group: {
+    title: 'Оставьте свои данные для записи',
+    placeholder: 'вариант подписки',
+  },
+  personal: {
+    title: 'Записаться на индивидуальные занятия',
+    placeholder: 'Ваш запрос',
+  },
+  retreat: {
+    title: 'Принять участие в ретрите',
+    placeholder: 'Сообщение',
+  },
+  cooperation: {
+    title: 'Чем мы можем Вам помочь?',
+    placeholder: 'Сообщение',
+  },
 };
 
 export function Form({ variant }) {
@@ -96,7 +108,7 @@ export function Form({ variant }) {
               <div className="fetching" />
             </div>
           )}
-          <p className="form_title">{formVariant[variant]}</p>
+          <p className="form_title">{formVariant[variant].title}</p>
           <div className="message block">
             <FormInput
               placeholder="Имя"
@@ -105,7 +117,7 @@ export function Form({ variant }) {
             />
             <FormInput
               type="textarea"
-              placeholder={variant === 'personal' ? 'Ваш запрос' : 'Сообщение'}
+              placeholder={formVariant[variant].placeholder}
               {...register('message')}
               errorMessage={errors.message?.message}
             />
