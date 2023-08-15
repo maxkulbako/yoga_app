@@ -6,16 +6,22 @@ import { useContext } from 'react';
 
 import './contacts.scss';
 
-export function Contacts() {
+const iconsData = [
+  { id: 'instagram', href: 'https://www.instagram.com/nana.chaannel/' },
+  { id: 'youtube', href: 'https://youtube.com/@yogawithnana' },
+  { id: 'telegram', href: 'https://t.me/nanayoga' },
+  { id: 'mail', href: 'mailto: nanayoga.manager@gmail.com' },
+];
+
+export function Contacts({ data = iconsData }) {
   const { setActiveContant } = useContext(ModalContext);
-  const icons = ['instagram', 'youtube', 'telegram', 'mail'];
 
   return (
     <div className="contacts_page_container">
       <div className="contacts_wrapper">
-        {icons.map((id) => (
+        {data.map(({ id, href }) => (
           <Fragment key={id}>
-            <a href>
+            <a href={href} target="_blank">
               <ContactButton id={id} />
             </a>
             <div className="contacts_separator" />

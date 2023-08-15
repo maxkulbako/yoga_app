@@ -1,31 +1,39 @@
-import "./_footer.scss";
-import { SocialMediaSvg } from "../SocialMedia";
-import { useContext } from "react";
-import { ModalContext } from "../../components/Modal/ModalContext";
+import './_footer.scss';
+import { SocialMediaSvg } from '../SocialMedia';
+import { useContext } from 'react';
+import { ModalContext } from '../../components/Modal/ModalContext';
 
-export function Footer() {
+const iconsData = [
+  { id: 'instagram', href: 'https://www.instagram.com/nana.chaannel' },
+  { id: 'youtube', href: 'https://youtube.com/@yogawithnana' },
+  { id: 'mail', href: 'mailto: nanayoga.manager@gmail.com' },
+];
+
+export function Footer({ data = iconsData }) {
   const { setActiveContant } = useContext(ModalContext);
 
   return (
     <footer className="footer_wrapper">
-      <div className="footer_web">nana.yoga.com</div>
+      <div className="footer_web">nana-yoga.com</div>
       <div className="footer_copyright">
-        Copyright 2022 nana.yoha.com, All rights reserved. We use Cookies.
+        Copyright 2022 nana-yoga.com, All rights reserved. We use Cookies.
       </div>
       <div className="social_media_wrapper">
-        <SocialMediaSvg id="mail" />
-        <SocialMediaSvg id="instagram" />
-        <SocialMediaSvg id="youtube" />
+        {data.map(({ id, href }) => (
+          <a href={href} target="_blank">
+            <SocialMediaSvg id={id} />
+          </a>
+        ))}
       </div>
       <div className="footer_terms_privacy">
         <ul>
-          <a href="#234" onClick={() => setActiveContant("termsConditions")}>
+          <a href="#234" onClick={() => setActiveContant('termsConditions')}>
             Terms & Conditions
           </a>
-          <a onClick={() => setActiveContant("privacyPolicy")} href="#234">
+          <a onClick={() => setActiveContant('privacyPolicy')} href="#234">
             Privacy Policy
           </a>
-          <a onClick={() => setActiveContant("cookieFiles")} href="#234">
+          <a onClick={() => setActiveContant('cookieFiles')} href="#234">
             Cookies Policy
           </a>
           <a href="#234">Security</a>

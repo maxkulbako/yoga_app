@@ -1,4 +1,4 @@
-import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 
 export const termsConditions = (
   <OverlayScrollbarsComponent defer>
@@ -12,9 +12,8 @@ export const termsConditions = (
       </p>
       <p>2. Опис послуги</p>
       <p>
-        2.1 Студія йоги надає заняття йоги та пов'язані послуги, такі як
-        фітнес-класи, ретріти, індивідуальні консультації та інші додаткові
-        послуги.
+        2.1 Студія йоги надає заняття йоги та пов'язані послуги, такі як йога
+        практики ретріти, індивідуальні консультації та інші додаткові послуги.
       </p>
       <p>
         2.2 Зареєстровані користувачі мають можливість реєструватися на заняття,

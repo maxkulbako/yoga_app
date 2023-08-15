@@ -21,8 +21,11 @@ export function Modal() {
   const { activeContant, setActiveContant } = useContext(ModalContext);
 
   return (
-    <div className={activeContant ? 'modal_wrapper active' : 'modal_wrapper'}>
-      <div className="modal_content">
+    <div
+      className={activeContant ? 'modal_wrapper active' : 'modal_wrapper'}
+      onClick={() => setActiveContant(false)}
+    >
+      <div className="modal_content" onClick={(e) => e.stopPropagation()}>
         <button
           className="modal_close_btn"
           onClick={() => setActiveContant(false)}

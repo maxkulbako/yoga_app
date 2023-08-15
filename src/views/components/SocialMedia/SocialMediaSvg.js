@@ -1,8 +1,8 @@
-import "./social_media.scss";
+import './social_media.scss';
 
 export function SocialMediaSvg({ id }) {
   switch (id) {
-    case "instagram":
+    case 'instagram':
       return (
         <svg
           width="20"
@@ -18,7 +18,7 @@ export function SocialMediaSvg({ id }) {
         </svg>
       );
 
-    case "mail":
+    case 'mail':
       return (
         <svg
           width="24"
@@ -34,7 +34,7 @@ export function SocialMediaSvg({ id }) {
         </svg>
       );
 
-    case "telegram":
+    case 'telegram':
       return (
         <svg
           width="24"
@@ -69,7 +69,7 @@ export function SocialMediaSvg({ id }) {
         </svg>
       );
 
-    case "youtube":
+    case 'youtube':
       return (
         <svg width="24" height="17" viewBox="0 0 24 17" fill="currentCollor">
           <path
@@ -81,7 +81,7 @@ export function SocialMediaSvg({ id }) {
         </svg>
       );
 
-    case "video":
+    case 'video':
       return (
         <div className="video_svg">
           <svg
@@ -89,7 +89,7 @@ export function SocialMediaSvg({ id }) {
             height="109"
             viewBox="0 0 109 109"
             fill="none"
-            onClick={() => window.open("https://www.youtube.com/", "_blank")}
+            onClick={() => window.open('https://www.youtube.com/', '_blank')}
           >
             <rect
               x="10"

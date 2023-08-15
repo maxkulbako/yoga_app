@@ -56,7 +56,7 @@ export function Form({ variant }) {
     const { name, message, telegram, mail, wishes } = data;
 
     const url =
-      'https://script.google.com/macros/s/AKfycbwDT6WYhpczODLMBB4yev2mUW0qCHTBTi_wL739hCiwmRt52DKb-Q6gaKsvzTRAPQ/exec';
+      'https://script.google.com/macros/s/AKfycbyqC8R-gfVO52dvF_fWPcYs-G4y3vZIniTOFKzdi5atKjrCMhA2M6cAsCJ1k8MvI-So/exec';
 
     axios
       .post(
