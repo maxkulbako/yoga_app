@@ -1,5 +1,5 @@
-import "./offline.scss";
-import { BaseButton } from "../../components";
+import './offline.scss';
+import { BaseButton } from '../../components';
 
 const telegramIcon = (
   <svg
@@ -47,21 +47,33 @@ export function OfflinePage() {
         }}
       ></div>
       <div className="page_text_block">
+        <p>Занятия проходят у моря в городе Пафос, Кипр.</p>
         <p>
-          сейчас наши очные занятия проходят в городе Пафос, Кипр. мы практикуем
-          дважды в неделю: вт/пт 8:00 утра.
+          <b>Расписание:</b> вт/пт в 19:00.
         </p>
         <p>
-          практики подходят для начинающего и среднего уровня. мы разбираем
-          базовые положения и, кто готов, делаем усложнения в некоторых асанах.
+          <b>Cтоимость:</b>
+        </p>
+        <ul className="list_wrapper">
+          <li>
+            <p>разовое занятие (60 мин) - 10 €;</p>
+          </li>
+          <li>
+            <p>абонемент на 10 занятий (60 мин) - 80 €;</p>
+          </li>
+        </ul>
+      </div>
+      <div className="page_text_block">
+        <p>
+          Практики подходят для <b>начинающего и среднего</b> уровня.
         </p>
         <p>
-          чтобы присоединиться, пожалуйста, перейдите ниже в наше
-          телеграм-сообщество и запишитесь на практику.
+          Переходите ниже в наше телеграм-сообщество и записывайтесь на
+          практику.
         </p>
       </div>
       <BaseButton
-        // onClick={() => window.open("https://www.youtube.com/", "_blank")}
+        onClick={() => window.open('https://t.me/nanayogacyprus', '_blank')}
         title="подписаться"
         icon={telegramIcon}
       />
