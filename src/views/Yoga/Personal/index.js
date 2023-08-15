@@ -5,6 +5,11 @@ import { ModalContext } from '../../components/Modal/ModalContext';
 
 export function PersonalTreningPage() {
   const { setActiveContant } = useContext(ModalContext);
+
+  const handleTelegram = () => {
+    window.open('https://t.me/nanayoga', '_blank');
+  };
+
   return (
     <div className="section_wrapper">
       <div
@@ -15,24 +20,41 @@ export function PersonalTreningPage() {
         }}
       />
       <div className="page_text_block">
+        <p>Доступные форматы: онлайн и оффлайн (Кипр).</p>
         <p>
-          индивидуальные занятия доступны в зависимости от загрузки Наны в
-          других проектах. формат может быть любой: онлайн или оффлайн.
+          <b>Стоимость онлайн занятий</b> в ZOOM:
         </p>
-        <p>
-          сперва мы проводим с вами встречу-знакомство, чтобы определить запрос.
-          и уже после определяем как и сколько будем практиковать.
-        </p>
-        <p>
-          чтобы узнать больше деталей, пожалуйста оформите заявку ниже и мы с
-          Вами свяжемся для дальнейших шагов.
-        </p>
-        <p>благодарим.</p>
+        <ul className="list_wrapper">
+          <li>разовое занятие (60 мин) - 30 €;</li>
+          <li>разовое занятие (90 мин) - 40 €;</li>
+          <li>абонемент на 10 занятий (60 мин) - 250 €;</li>
+          <li>абонемент на 10 занятий (90 мин) - 350€.</li>
+        </ul>
       </div>
-      <BaseButton
-        onClick={() => setActiveContant('personal')}
-        title="записаться"
-      />
+      <div className="page_text_block">
+        <p>
+          <b>Стоимость оффлайн занятий:</b>
+        </p>
+        <ul className="list_wrapper">
+          <li>разовое занятие (60 мин) - 40 €;</li>
+          <li>разовое занятие (90 мин) - 50 €;</li>
+          <li>абонемент на 10 занятий (60 мин) - 350 €;</li>
+          <li>абонемент на 10 занятий (90 мин) - 450€.</li>
+        </ul>
+      </div>
+      <div className="page_text_block">
+        <p>
+          Для записи оформите заявку ниже или свяжитесь со мной в Телеграм.{' '}
+        </p>
+        <p>Благодарю. </p>
+      </div>
+      <div className="buttons_wrapper">
+        <BaseButton
+          onClick={() => setActiveContant('personal')}
+          title="заполнить форму"
+        />
+        <BaseButton onClick={handleTelegram} title="мой Телеграм" />
+      </div>
     </div>
   );
 }

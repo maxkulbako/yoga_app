@@ -9,3 +9,28 @@
   justify-content: center;
   align-items: center;
 }
+
+.list_wrapper {
+  li {
+    position: relative;
+    padding: 0 0 10px 15px;
+
+    &::before {
+      content: '\2022';
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.buttons_wrapper {
+  display: flex;
+  gap: 30px;
+
+  @media screen and (max-width: 540px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+}

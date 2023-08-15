@@ -105,14 +105,14 @@ export function Form({ variant }) {
             />
             <FormInput
               type="textarea"
-              placeholder="message"
+              placeholder={variant === 'personal' ? 'Ваш запрос' : 'Сообщение'}
               {...register('message')}
               errorMessage={errors.message?.message}
             />
             {variant === 'retreat' && (
               <FormInput
                 type="textarea"
-                placeholder="wishes"
+                placeholder="Пожелания"
                 {...register('wishes')}
                 errorMessage={errors.wishes?.wishes}
               />
@@ -126,7 +126,7 @@ export function Form({ variant }) {
               errorMessage={errors.telegram?.message}
             />
             <FormInput
-              placeholder="mail"
+              placeholder="email"
               {...register('mail')}
               errorMessage={errors.mail?.message}
             />
