@@ -21,7 +21,7 @@ export function Footer({ data = iconsData }) {
       <div className="social_media_wrapper">
         {data.map(({ id, href }) => (
           <a key={id} href={href} target="_blank">
-            <SocialMediaSvg />
+            <SocialMediaSvg id={id} />
           </a>
         ))}
       </div>

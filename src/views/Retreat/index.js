@@ -26,7 +26,7 @@ export function Retreat() {
 export function RetreatStartPage() {
   const { setActiveContant } = useContext(ModalContext);
   return (
-    <div>
+    <div className="page_container">
       <div className="page_text_block">
         <p>
           Сегодня каждому из нас нужен глоток свежего воздуха, возможность
