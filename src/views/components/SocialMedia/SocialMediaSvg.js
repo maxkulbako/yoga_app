@@ -1,6 +1,6 @@
 import './social_media.scss';
 
-export function SocialMediaSvg({ id }) {
+export function SocialMediaSvg({ id, videoId }) {
   switch (id) {
     case 'instagram':
       return (
@@ -89,7 +89,16 @@ export function SocialMediaSvg({ id }) {
             height="109"
             viewBox="0 0 109 109"
             fill="none"
-            onClick={() => window.open('https://www.youtube.com/', '_blank')}
+            onClick={() =>
+              window.open(
+                `${
+                  videoId
+                    ? 'https://www.youtube.com/watch?v=' + videoId
+                    : 'https://www.youtube.com/@yogawithnana/videos'
+                }`,
+                '_blank'
+              )
+            }
           >
             <rect
               x="10"
