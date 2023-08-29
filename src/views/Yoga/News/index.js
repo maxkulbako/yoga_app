@@ -1,8 +1,23 @@
+import { useEffect, useState } from 'react';
 import { SocialMediaSvg } from '../../components/SocialMedia';
 
 import './_newspage.scss';
+import { fetchVideo } from './fetchVideos';
 
 export function NewsPage() {
+  const [currentVideo, setCurrentVideo] = useState();
+
+  useEffect(() => {
+    const fetchVideoData = async () => {
+      const video = await fetchVideo();
+      if (video) {
+        setCurrentVideo(video);
+      }
+    };
+
+    fetchVideoData();
+  }, []);
+
   return (
     <div className="section_wrapper">
       <div className="page_text_block">
@@ -26,12 +41,9 @@ export function NewsPage() {
       </div>
       <div
         className="youtube_img"
-        style={{
-          backgroundImage:
-            'url("https://i.ytimg.com/vi/h1srpuxm9ss/hqdefault.jpg")',
-        }}
+        style={{ backgroundImage: `url("${currentVideo?.thumbnailUrl}")` }}
       >
-        <SocialMediaSvg id="video" videoId={'h1srpuxm9ss'} />
+        <SocialMediaSvg id="video" videoId={currentVideo?.id} />
       </div>
       <div className="page_text_block">
         <p>

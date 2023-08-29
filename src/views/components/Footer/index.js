@@ -36,7 +36,6 @@ export function Footer({ data = iconsData }) {
           <a onClick={() => setActiveContant('cookieFiles')} href="#234">
             Cookies Policy
           </a>
-          <a href="#234">Security</a>
         </ul>
       </div>
     </footer>

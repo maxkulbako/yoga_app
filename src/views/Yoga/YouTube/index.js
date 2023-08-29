@@ -1,18 +1,29 @@
-import "./youtube.scss";
-import { SocialMediaSvg } from "../../components/SocialMedia";
-import { BaseButton } from "../../components";
+import './youtube.scss';
+import { SocialMediaSvg } from '../../components/SocialMedia';
+import { BaseButton } from '../../components';
+import { useState, useEffect } from 'react';
+import { fetchVideo } from '../News/fetchVideos';
 
 export function YoutubePage() {
+  const [currentVideo, setCurrentVideo] = useState();
+
+  useEffect(() => {
+    const fetchVideoData = async () => {
+      const video = await fetchVideo();
+      if (video) {
+        setCurrentVideo(video);
+      }
+    };
+
+    fetchVideoData();
+  }, []);
   return (
     <div className="section_wrapper">
       <div
         className="youtube_img"
-        style={{
-          backgroundImage:
-            'url("https://res.cloudinary.com/dd69ztxsd/image/upload/v1677049574/nana_yoga/Hatha_Yoga_odq6cv.jpg")',
-        }}
+        style={{ backgroundImage: `url("${currentVideo?.thumbnailUrl}")` }}
       >
-        <SocialMediaSvg id="video" />
+        <SocialMediaSvg id="video" videoId={currentVideo?.id} />
       </div>
       <div className="page_text_block">
         <p>
@@ -47,7 +58,9 @@ export function YoutubePage() {
         </p>
       </div>
       <BaseButton
-        onClick={() => window.open("https://www.youtube.com/", "_blank")}
+        onClick={() =>
+          window.open('https://youtube.com/@yogawithnana', '_blank')
+        }
         title="подписаться"
       />
     </div>
