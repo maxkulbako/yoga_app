@@ -43,10 +43,10 @@ const formVariant = {
   },
   retreat: {
     title: 'Принять участие в ретрите',
-    placeholder: 'Сообщение',
+    placeholder: 'message',
   },
   cooperation: {
-    title: 'Чем мы можем Вам помочь?',
+    title: 'Как мы можем быть полезны?',
     placeholder: 'Сообщение',
   },
 };
@@ -121,14 +121,6 @@ export function Form({ variant }) {
               {...register('message')}
               errorMessage={errors.message?.message}
             />
-            {variant === 'retreat' && (
-              <FormInput
-                type="textarea"
-                placeholder="Пожелания"
-                {...register('wishes')}
-                errorMessage={errors.wishes?.wishes}
-              />
-            )}
           </div>
           <div className="contacts block">
             <p className="form_subtitle">как с вами связаться</p>

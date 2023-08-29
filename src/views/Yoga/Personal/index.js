@@ -69,7 +69,7 @@ export function PersonalTreningPage() {
           onClick={() => setActiveContant('personal')}
           title="заполнить форму"
         />
-        <BaseButton onClick={handleTelegram} title="мой Телеграм" />
+        <BaseButton onClick={handleTelegram} title="Телеграм" />
       </div>
     </div>
   );

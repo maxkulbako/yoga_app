@@ -10,10 +10,12 @@ import { PersonalTreningPage } from '../../views/Yoga/Personal';
 import { Courses, CoursesList, CoursePage } from '../../views/Yoga/Courses';
 import { YogaNavMenu } from '../../views/Yoga/components/YogaNavMenu';
 import { StartPage } from '../../views';
-import { RetreatPage } from '../../views/Retreat/RetreatPage';
 import { RetreatStartPage } from '../../views';
 import { RetreatNavMenu } from '../../views/Retreat/components/RetreatNavMenu';
 import { App } from '../../App';
+import { InsidePage } from '../../views/Retreat/InsidePage';
+import { CarpathiansPage } from '../../views/Retreat/CarpathiansPage';
+import { CiprusPage } from '../../views/Retreat/CiprusPage';
 
 const createRouter =
   process.env.ENV === 'gh-pages' ? createHashRouter : createBrowserRouter;
@@ -96,8 +98,16 @@ export const router = createRouter([
                   ),
               },
               {
-                path: ':titleID',
-                element: <RetreatPage />,
+                path: 'inside',
+                element: <InsidePage />,
+              },
+              {
+                path: 'summer',
+                element: <CarpathiansPage />,
+              },
+              {
+                path: 'cyprus',
+                element: <CiprusPage />,
               },
             ],
           },
