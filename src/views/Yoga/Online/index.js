@@ -8,10 +8,7 @@ export function Online() {
 
   return (
     <div className="section_wrapper">
-      <img
-        src="https://res.cloudinary.com/dd69ztxsd/image/upload/v1684776119/nana_yoga/YOGA/PNG_online_group_wblnz5.png"
-        alt="NANA_ONLINE"
-      />
+      <img src="/desk_mobile.png" alt="NANA_ONLINE" />
       <div className="page_text_block">
         <p>
           Онлайн-группа - это <b>поддерживающее пространство</b>, которое

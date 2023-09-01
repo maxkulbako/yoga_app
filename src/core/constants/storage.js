@@ -8,8 +8,7 @@ export const yogaMenuList = [
   {
     title: 'онлайн-группа',
     link: 'online',
-    background:
-      'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1684773288/nana_yoga/YOGA/Yoga_Menu_IMG/IMG_online_courses_kn4bbc.jpg',
+    background: '/online.jpg',
   },
   {
     title: 'youtube',
@@ -26,8 +25,7 @@ export const yogaMenuList = [
   {
     title: 'индивидуальные занятия',
     link: 'pesonal',
-    background:
-      'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1684773700/nana_yoga/YOGA/Yoga_Menu_IMG/IMG_individual_ip8aok.jpg',
+    background: '/personal.jpg',
   },
 ];
 
@@ -46,49 +44,23 @@ export const coursesMenuList = [
       'https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284890/nana_yoga/course/img/%D0%B8%D0%BD%D1%8C_dkokyf.png',
     isDisabled: true,
   },
-  // {
-  //   title: "эффективное утро",
-  //   link: "morning",
-  //   background:
-  //     "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284882/nana_yoga/course/img/%D1%83%D1%82%D1%80%D0%BE_uselcs.jpg",
-  // },
-  // {
-  //   title: "женская йога в особенные дни",
-  //   link: "woman",
-  //   background:
-  //     "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284882/nana_yoga/course/img/%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%CC%86%D0%BE%D0%B3%D0%B0_ovooog.jpg",
-  // },
-  // {
-  //   title: "инь-йога",
-  //   link: "in",
-  //   background:
-  //     "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284890/nana_yoga/course/img/%D0%B8%D0%BD%D1%8C_dkokyf.png",
-  // },
-  // {
-  //   title: "14 дней практики каждый день",
-  //   link: "14_day",
-  //   background:
-  //     "https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284881/nana_yoga/course/img/14_%D0%B4%D0%BD%D0%B5%D0%B8%CC%86_vrwn7d.jpg",
-  // },
 ];
 
 export const retreatMenuList = [
   {
-    title: 'Карпаты.вглубь',
+    title: 'Кипр',
+    link: 'cyprus',
+    background: '/cyprus.jpeg',
+  },
+  {
+    title: 'Карпаты.зима',
     link: 'inside',
-    background:
-      'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1685699694/nana_yoga/retreat/IMG_Carpathians_xptk05.jpg',
+    background: '/carp_inside.jpg',
   },
   {
     title: 'Карпаты.лето',
     link: 'summer',
-    background:
-      'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1685699700/nana_yoga/retreat/IMG_inside_wm6jef.jpg',
-  },
-  {
-    title: 'Кипр',
-    link: 'cyprus',
-    background: '/cyprus_test_back.jpeg',
+    background: '/carp_summer.jpg',
   },
 ];
 

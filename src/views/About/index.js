@@ -7,7 +7,7 @@ export function About() {
   const navigate = useNavigate();
 
   const handleYoutube = () => {
-    window.open('https://youtu.be/krz4oMNhm5I', '_blank');
+    window.open('https://www.youtube.com/@yogawithnana', '_blank');
   };
 
   const handlePractice = () => {
@@ -30,7 +30,7 @@ export function About() {
           </p>
           <p>
             Очень рада, что вы здесь оказались. Ведь это значит, что Ваша душа
-            стремиться к познанию своей изначальной сути и свободе.
+            стремится к познанию своей изначальной сути и свободе.
           </p>
           <p>
             Все мы приходим к йоге по разным причинам и это абсолютно нормально.

@@ -28,23 +28,22 @@
 
   ul {
     &.start {
-      width: 404px;
+      width: 100%;
 
       .header_nav_separator {
         background-color: #ffffff;
       }
 
-      @media screen and (max-width: 800px) {
-        width: 100%;
-      }
-
       .header_nav_link {
+        width: 100%;
         font-weight: 400;
         font-size: 24px;
         line-height: 28px;
         color: #ffffff;
 
         @media screen and (min-width: 800px) {
+          font-weight: 100;
+          width: 404px;
           &.active {
             &:after {
               content: '';
@@ -206,6 +205,6 @@
     display: block;
     height: fit-content;
     align-self: center;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 }
