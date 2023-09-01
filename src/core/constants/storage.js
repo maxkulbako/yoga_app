@@ -8,7 +8,7 @@ export const yogaMenuList = [
   {
     title: 'онлайн-группа',
     link: 'online',
-    background: '/online.jpg',
+    background: '/online_btn.jpeg',
   },
   {
     title: 'youtube',
@@ -25,7 +25,7 @@ export const yogaMenuList = [
   {
     title: 'индивидуальные занятия',
     link: 'pesonal',
-    background: '/personal.jpg',
+    background: '/personal_btn.jpeg',
   },
 ];
 
