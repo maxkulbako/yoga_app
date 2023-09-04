@@ -1,9 +1,7 @@
-import { Outlet } from 'react-router-dom';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import { YogaNavMenu } from './components/YogaNavMenu';
 import { useEffect, useRef } from 'react';
-import { ScrollRestoration } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Outlet, ScrollRestoration } from 'react-router-dom';
 
 import './yoga.scss';
 

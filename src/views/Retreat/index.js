@@ -1,11 +1,19 @@
-import { Outlet } from 'react-router-dom';
+import { useLocation, Outlet, ScrollRestoration } from 'react-router-dom';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import { RetreatNavMenu } from './components/RetreatNavMenu';
 import { BaseButton } from '../components';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { ModalContext } from '../components/Modal/ModalContext';
 
 export function Retreat() {
+  let location = useLocation();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      ref.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  }, [location]);
   return (
     <main className="main_wrapper">
       <OverlayScrollbarsComponent>
@@ -16,6 +24,7 @@ export function Retreat() {
       <div className="content_separator" />
       <OverlayScrollbarsComponent defer>
         <div className="side_wrapper">
+          <ScrollRestoration />
           <Outlet />
         </div>
       </OverlayScrollbarsComponent>

@@ -1,5 +1,5 @@
 import { BaseButton } from '../components/Buttons/BaseButton';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, ScrollRestoration } from 'react-router-dom';
 
 import './about.scss';
 
@@ -16,6 +16,7 @@ export function About() {
 
   return (
     <div className="about_contant_wrapper">
+      <ScrollRestoration />
       <div className="img_wrapper">
         <img
           alt="ava_img"

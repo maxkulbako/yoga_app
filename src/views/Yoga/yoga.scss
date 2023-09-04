@@ -104,18 +104,21 @@
 
     overflow: hidden;
 
-    &:hover {
-      box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
-      transform: scale3d(1.01, 1.01, 1.01);
-      transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+    @media screen and (min-width: 800px) {
+      &:hover {
+        box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
+        transform: scale3d(1.01, 1.01, 1.01);
+        transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+      }
+
+      &.selected {
+        margin-left: 20px;
+        box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
+        transform: scale3d(1.01, 1.01, 1.01);
+        transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+      }
     }
 
-    &.selected {
-      margin-left: 20px;
-      box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
-      transform: scale3d(1.01, 1.01, 1.01);
-      transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
-    }
     p {
       font-family: 'Raleway', sans-serif;
       font-size: 48px;

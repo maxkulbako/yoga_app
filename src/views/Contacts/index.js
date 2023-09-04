@@ -1,8 +1,8 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { SocialMediaSvg } from '../components/SocialMedia';
 import { BaseButton } from '../components/Buttons/BaseButton';
 import { ModalContext } from '../components/Modal/ModalContext';
-import { useContext } from 'react';
+import { ScrollRestoration } from 'react-router-dom';
 
 import './contacts.scss';
 
@@ -18,6 +18,7 @@ export function Contacts({ data = iconsData }) {
 
   return (
     <div className="contacts_page_container">
+      <ScrollRestoration />
       <div className="contacts_wrapper">
         {data.map(({ id, href }) => (
           <Fragment key={id}>

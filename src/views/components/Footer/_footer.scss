@@ -3,13 +3,13 @@
   padding: 50px 0 30px 0;
   margin: 0 auto;
   display: grid;
-  grid-template-areas: "web web web" "copyright social_media policy";
+  grid-template-areas: 'web web web' 'copyright social_media policy';
   row-gap: 20px;
   align-items: center;
 
   @media screen and (max-width: 1000px) {
     justify-content: center;
-    grid-template-areas: "web" "social_media" "copyright" "policy";
+    grid-template-areas: 'web' 'social_media' 'copyright' 'policy';
     padding: 50px 20px 30px 10px;
     width: 80vw;
   }
@@ -21,7 +21,7 @@
 
 .footer_web {
   grid-area: web;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 700;
 
@@ -33,7 +33,7 @@
 
 .footer_copyright {
   grid-area: copyright;
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-size: 12px;
   font-weight: 500;
 
@@ -63,17 +63,20 @@
   grid-area: policy;
   justify-self: end;
 
+  @media screen and (max-width: 800px) {
+    justify-self: center;
+  }
+
   ul {
     display: flex;
     gap: 20px;
 
     @media screen and (max-width: 800px) {
-      justify-content: center;
       flex-wrap: wrap;
     }
 
     a {
-      font-family: "Raleway";
+      font-family: 'Raleway';
       font-size: 12px;
       font-weight: 500;
       color: #000;
