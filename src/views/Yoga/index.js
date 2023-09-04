@@ -11,7 +11,7 @@ export function ContentYoga() {
 
   useEffect(() => {
     setTimeout(() => {
-      ref.current?.scrollIntoView({ behavior: 'smooth' });
+      ref.current?.scrollIntoView({ behavior: 'instant', block: 'end' });
     }, 0);
   }, [location]);
 
