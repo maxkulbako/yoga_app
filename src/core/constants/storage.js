@@ -50,17 +50,17 @@ export const retreatMenuList = [
   {
     title: 'Кипр',
     link: 'cyprus',
-    background: '/cyprus.jpeg',
+    background: '/cyprus.jpg',
   },
   {
     title: 'Карпаты.зима',
     link: 'inside',
-    background: '/carp_inside.jpg',
+    background: '/carp_winter.jpg',
   },
   {
     title: 'Карпаты.лето',
     link: 'summer',
-    background: '/carp_summer.jpg',
+    background: '/carp_summer.jpeg',
   },
 ];
 

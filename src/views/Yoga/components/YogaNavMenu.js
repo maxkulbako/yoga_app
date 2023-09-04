@@ -9,7 +9,7 @@ function ViewYogaNavMenu({ menuList = yogaMenuList, changeTitle }) {
 
   return (
     <div>
-      { menuList.map(({ title, background, link }) => (
+      {menuList.map(({ title, background, link }) => (
         <MenuButton
           isSelected={active === title}
           onClick={() => {
