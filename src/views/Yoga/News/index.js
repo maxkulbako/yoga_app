@@ -21,22 +21,22 @@ export function NewsPage() {
   return (
     <div className="section_wrapper">
       <div className="page_text_block">
-        <p>Рады приветствовать вас.</p>
-        <p>Мы активно ведем нашу йога-жизнь и делимся ею с вами.</p>
+        <p>We are happy to welcome you.</p>
+        <p>We actively lead our yoga life and share it with you.</p>
         <p>
-          Это пространство создано для единомышленников. Для всех, кто ищет
-          поддержки на пути йоги и самопознания. Кто хочет идти вдолгую и
-          качественно, утверждаясь в выбранном мировоззрении.
+          This space is created for like-minded people. For everyone who seeks
+          support on the path of yoga and self-discovery. For those who want to
+          go long-term and with quality, affirming their chosen worldview.
         </p>
         <p>
-          Здесь Вы можете найти разные способы практиковать и углублять свои
-          знания. Для этого мы постоянно расширяем и улучшаем качество наших
-          продуктов. И знакомим Вас с ними.
+          Here you can find different ways to practice and deepen your
+          knowledge. To this end, we are constantly expanding and improving the
+          quality of our products. And we introduce you to them.
         </p>
         <p>
-          Если Вы еще не практиковали с Наной, то ниже можно перейти на одну из
-          практик YouTube канала и сделать это. И не забывайте подписаться, это
-          очень ценно для нас.{' '}
+          If you haven't practiced with Nana yet, you can access one of the
+          practices from our YouTube channel below and give it a try. And don't
+          forget to subscribe; it means a lot to us.
         </p>
       </div>
       <div
@@ -47,22 +47,18 @@ export function NewsPage() {
       </div>
       <div className="page_text_block">
         <p>
-          Для регулярных совместных практик Вы также можете присоединиться к
-          нашей онлайн-группе (детали читайте во вкладке “онлайн-группа”).
-          Сейчас в группе занимается более 80 человек с разных уголков мира,
-          объединённые общей целью.
+          For regular joint practices, you can also join our online group (see
+          details in the "online group" tab). Currently, over 80 people from
+          around the world are part of the group, united by a common goal.
         </p>
         <p>
-          Мы так же работаем над несколькими курсами, которые вскоре появятся
-          здесь и будут доступны для приобретения. Продолжаем снимать практики
-          на канал, ведем живые практики на Кипре и переодически проводим
-          ретриты.
+          We are also working on several courses that will soon appear here and
+          be available for purchase. We continue to film practices for the
+          channel, hold live sessions in Cyprus, and occasionally conduct
+          retreats.
         </p>
-        <p>
-          Выбирайте комфортный способ взаимодействия с нами и начинайте уже
-          сейчас.
-        </p>
-        <p>Желаем не останавливаться на пути саморазвития.</p>
+        <p>Choose a comfortable way to connect with us and start right now.</p>
+        <p>We wish you not to stop on the path of self-development.</p>
         <p>OM.</p>
       </div>
     </div>

@@ -42,7 +42,7 @@ const formVariant = {
     placeholder: 'Ваш запрос',
   },
   retreat: {
-    title: 'Принять участие в ретрите',
+    title: 'Sign Up for the Retreat',
     placeholder: 'message',
   },
   cooperation: {
@@ -111,7 +111,7 @@ export function Form({ variant }) {
           <p className="form_title">{formVariant[variant].title}</p>
           <div className="message block">
             <FormInput
-              placeholder="Имя"
+              placeholder="Name"
               {...register('name')}
               errorMessage={errors.name?.message}
             />
@@ -123,7 +123,7 @@ export function Form({ variant }) {
             />
           </div>
           <div className="contacts block">
-            <p className="form_subtitle">как с вами связаться</p>
+            <p className="form_subtitle">Let Us Know How to Reach You</p>
             <FormInput
               placeholder="@telegram"
               {...register('telegram')}
@@ -138,7 +138,7 @@ export function Form({ variant }) {
           <div>
             <BaseButton
               type="submit"
-              title="Отправить сообщение"
+              title="Send the message"
               variant="in_form"
             />
           </div>

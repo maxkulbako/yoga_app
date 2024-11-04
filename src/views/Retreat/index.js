@@ -38,41 +38,38 @@ export function RetreatStartPage() {
     <div className="page_container">
       <div className="page_text_block">
         <p>
-          Сегодня каждому из нас нужен глоток свежего воздуха, возможность
-          вынырнуть из рутины повседневных дел и перестать бежать, как белка в
-          колесе. Кому-то необходимо задать себе важные вопросы (на самом деле
-          всем), кому-то просто отдохнуть и вернуться к своей первоначальной
-          природе.{' '}
+          Today, each of us needs a breath of fresh air—a chance to break free
+          from daily routines and stop running like a hamster on a wheel. Some
+          need to ask themselves important questions (actually, we all do),
+          while others just need to rest and reconnect with their true nature.
         </p>
         <p>
-          Ретрит - это место перезагрузки и погружения, перенесения фокуса
-          вовнутрь и соединения с собой. Каждая такая встреча насыщена
-          практиками и осознаниями. Используя одинаковые инструменты, здесь
-          каждый обретает свое и увозит с собой разное. Место, где можно
-          отпустить, выдохнуть, простить и проститься.{' '}
+          A retreat is a place for resetting and immersing oneself, shifting the
+          focus inward, and reconnecting with oneself. Each gathering here is
+          filled with practices and realizations. While using the same tools,
+          everyone gains their own insights and takes away something unique.
+          It’s a place where you can let go, exhale, forgive, and release.
+        </p>
+        <p>Here, you can clear your mind and move closer to a state of yoga.</p>
+        <p>
+          Don’t expect any specific results; after all, this is what yoga
+          teaches us. Simply join if you feel drawn to it, if you have the
+          desire—or perhaps even the need.
         </p>
         <p>
-          Здесь Вы можете очистить сознание и приблизиться к состоянию йоги.{' '}
+          In every journey, we carry ourselves with us, so let’s gain this
+          clarity and embark on the most important journey—to ourselves.
         </p>
+        <p>The program for each retreat is created individually.</p>
         <p>
-          Не ждите никаких результатов, ведь этому нас учит йога. Просто
-          присоединяйтесь, если чувствуете такой отклик, желание, а может быть
-          даже необходимость.{' '}
+          If you want to be the first to know about the next retreat and sign up
+          at the best rates, leave a request below, and we’ll reach out to you
+          first (*filling out the form does not oblige you to attend).
         </p>
-        <p>
-          В каждое путешествие мы берем с собой себя, так давайте обретем эту
-          ясность и совершим самое важное путешествие - к себе.{' '}
-        </p>
-        <p>Программа каждого ретрита формируется индивидуально. </p>
-        <p>
-          Если хотите узнать первыми о следующем ретрите и записаться по самым
-          приятным ценам - оставляйте заявку ниже, мы свяжемся с Вами в первую
-          очередь (*заполнение формы не обязывает вас ехать).{' '}
-        </p>
-        <p>ОМ.</p>
+        <p>OM.</p>
       </div>
       <BaseButton
-        title="хочу на ретрит"
+        title="Start Your Retreat Journey"
         onClick={() => setActiveContant('retreat')}
       />
     </div>

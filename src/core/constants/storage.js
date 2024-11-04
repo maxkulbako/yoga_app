@@ -1,12 +1,12 @@
 export const yogaMenuList = [
   {
-    title: 'курсы',
+    title: 'сourses',
     link: 'course',
     background:
       'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1684772626/nana_yoga/YOGA/Yoga_Menu_IMG/IMG_courses_zefjal.jpg',
   },
   {
-    title: 'онлайн-группа',
+    title: 'online-group',
     link: 'online',
     background: '/online_btn.jpeg',
   },
@@ -17,13 +17,13 @@ export const yogaMenuList = [
       'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1684773460/nana_yoga/YOGA/Yoga_Menu_IMG/IMG_youtube_ugmfpm.jpg',
   },
   {
-    title: 'оффлайн-занятия',
+    title: 'offline-sessions',
     link: 'offline',
     background:
       'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1684773596/nana_yoga/YOGA/Yoga_Menu_IMG/IMG_offline_syvryv.jpg',
   },
   {
-    title: 'индивидуальные занятия',
+    title: 'individual session',
     link: 'pesonal',
     background: '/personal_btn.jpeg',
   },
@@ -31,14 +31,14 @@ export const yogaMenuList = [
 
 export const coursesMenuList = [
   {
-    title: 'погружение',
+    title: 'deep',
     link: 'deep',
     background:
       'https://res.cloudinary.com/dd69ztxsd/image/upload/q_auto,f_auto/v1684774973/nana_yoga/YOGA/Courses/IMG_COURSE_deep_htnbqv.jpg',
     isDisabled: true,
   },
   {
-    title: 'женское начало',
+    title: 'feminine',
     link: 'feminine',
     background:
       'https://res.cloudinary.com/dd69ztxsd/image/upload/v1676284890/nana_yoga/course/img/%D0%B8%D0%BD%D1%8C_dkokyf.png',
@@ -48,27 +48,27 @@ export const coursesMenuList = [
 
 export const retreatMenuList = [
   {
-    title: 'Кипр',
+    title: 'Cyprus',
     link: 'cyprus',
     background: '/cyprus.jpg',
   },
   {
-    title: 'Карпаты.зима',
+    title: 'Carpathians.winter',
     link: 'inside',
     background: '/carp_winter.jpg',
   },
   {
-    title: 'Карпаты.лето',
+    title: 'carpathians.summer',
     link: 'summer',
     background: '/carp_summer.jpeg',
   },
 ];
 
 export const navMenuList = [
-  { title: 'о Нане', link: 'about' },
-  { title: 'йога', link: 'yoga' },
-  { title: 'ретрит', link: 'retreat' },
-  { title: 'контакты', link: 'contacts' },
+  { title: 'about Nana', link: 'about' },
+  { title: 'yoga', link: 'yoga' },
+  { title: 'retreat', link: 'retreat' },
+  { title: 'contacts', link: 'contacts' },
 ];
 
 export const LOGO_BLACK =
